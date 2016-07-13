@@ -1,0 +1,86 @@
+// Mixins
+
+
+
+// Variables
+$font: 'Trebuchet MS';
+
+// Dimensions
+$divheight: 600px;
+$divwidth: 100%;
+
+// Colors
+$lightblue1: #b3ecff;
+$lightblue2: #80dfff;
+$blue: #63C6E3;
+$darkblue1: #0086b3;
+$darkblue2: #004d66;
+$darkblue3: #002533;
+$lightgrey: #e6e6e6;
+$darkfont: #595959;
+
+body {
+  background-color: white;
+}
+
+#container {
+    width: $divwidth;
+    height: $divheight;
+    position: relative;
+}
+
+#mainlogo {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: inline-block;
+}
+
+#bio {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-block;
+  padding-left: 50px;
+  .icon {
+    display: inline-block;
+    img {
+      margin-left: 20px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+#projects {
+  background-color: $lightgrey;
+}
+
+#portfolio {
+
+}
+
+#skills {
+
+}
+
+#bigcircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.font {
+  font-family: $font, 'sans-serif';
+}
+
+bio-h1 {
+  font-weight: bold;
+  color: $blue;
+  font-size: 30px;
+}
+
+bio-h2 {
+  color: $darkfont;
+  font-size: 20px;
+}
