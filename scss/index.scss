@@ -37,6 +37,8 @@ body {
 }
 
 #bio {
+  width: $divwidth/3;
+  word-wrap: break-word;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -83,4 +85,8 @@ bio-h1 {
 bio-h2 {
   color: $darkfont;
   font-size: 20px;
+}
+
+a {
+  target: _blank;
 }
