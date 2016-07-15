@@ -17,8 +17,5 @@ Page will comprise of a few segments :
 ## Tools
 
 - HTML, CSS, SASS For Content
+- JQuery for Menu
 - (?) For Contact Me Forms
-
-## Image Hosting
-
-TBD

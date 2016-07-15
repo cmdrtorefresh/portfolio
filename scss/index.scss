@@ -2,8 +2,9 @@
 
 
 
-// Variables
-$font: 'Trebuchet MS';
+// Fonts
+$athiti: 'Athiti', sans-serif;
+$arimamadurai: 'Arima Madurai', cursive;
 
 // Dimensions
 $divheight: 600px;
@@ -34,6 +35,10 @@ body {
   top: 50%;
   right: 50%;
   display: inline-block;
+  img {
+    width: 600px;
+    height: 235px;
+  }
 }
 
 #bio {
@@ -47,7 +52,7 @@ body {
   .icon {
     display: inline-block;
     img {
-      margin-left: 20px;
+      margin-left: 15px;
       width: 50px;
       height: 50px;
     }
@@ -72,21 +77,15 @@ body {
     border-radius: 100%;
 }
 
-.font {
-  font-family: $font, 'sans-serif';
+p {
+  color: $darkfont;
+  font-size: 18px;
+  font-family: $athiti;
 }
 
 bio-h1 {
   font-weight: bold;
   color: $blue;
-  font-size: 30px;
-}
-
-bio-h2 {
-  color: $darkfont;
-  font-size: 20px;
-}
-
-a {
-  target: _blank;
+  font-size: 40px;
+  font-family: $arimamadurai;
 }

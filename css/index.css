@@ -11,6 +11,9 @@ body {
   top: 50%;
   right: 50%;
   display: inline-block; }
+  #mainlogo img {
+    width: 600px;
+    height: 235px; }
 
 #bio {
   width: 33.33333%;
@@ -23,7 +26,7 @@ body {
   #bio .icon {
     display: inline-block; }
     #bio .icon img {
-      margin-left: 20px;
+      margin-left: 15px;
       width: 50px;
       height: 50px; }
 
@@ -35,17 +38,21 @@ body {
   height: 100px;
   border-radius: 100%; }
 
-.font {
-  font-family: "Trebuchet MS", "sans-serif"; }
+p {
+  color: #595959;
+  font-size: 18px;
+  font-family: "Athiti", sans-serif; }
 
 bio-h1 {
   font-weight: bold;
   color: #63C6E3;
-  font-size: 30px; }
+  font-size: 40px;
+  font-family: "Arima Madurai", cursive; }
 
 bio-h2 {
   color: #595959;
-  font-size: 20px; }
+  font-size: 18px;
+  font-family: "Athiti", sans-serif; }
 
 a {
   target: _blank; }
