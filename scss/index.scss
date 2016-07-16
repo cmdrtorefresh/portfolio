@@ -1,10 +1,20 @@
 // Mixins
+@mixin setupfont($family, $size, $color){
+  font-family: $family;
+  color: $color;
+  font-size: $size;
+}
 
+@mixin align($content, $text: center){
+  align-content: $content;
+  text-align: $text;
+}
 
 
 // Fonts
 $athiti: 'Athiti', sans-serif;
 $arimamadurai: 'Arima Madurai', cursive;
+$quicksand: 'Quicksand', sans-serif;
 
 // Dimensions
 $divheight: 800px;
@@ -13,6 +23,10 @@ $mainlogoheight: 235px;
 $mainlogowidth: 600px;
 $welcomepagetop: 0.5 * ($divheight - $mainlogoheight);
 $containerpadding: 20px;
+$projectheight: 575px;
+$projectwidth: 300px;
+$learnmorewidth: 250px;
+$projectpadding: 20px;
 
 // Colors
 $lightblue1: #b3ecff;
@@ -47,7 +61,6 @@ body {
 
 #bio {
   width: $divwidth/3;
-  word-wrap: break-word;
   position: absolute;
   left: 50%;
   top: $welcomepagetop;
@@ -63,23 +76,74 @@ body {
   }
 }
 
-#projects {
+#portfolio {
+  @include align(center, center);
   border-color: $blue;
   border-style: solid;
   border-width: 10px;
-  height: $divheight;
-  padding: $containerpadding;
+  height: auto;
+  padding-bottom: 50px;
   h1 {
-    font-family: $arimamadurai;
-    font-size: 60px;
-    text-align: center;
-    color: $blue;
+    @include setupfont($arimamadurai, 50px, $blue);
+    display: block;
+  }
+  h3 {
+    @include setupfont($arimamadurai, 30px, $darkfont);
+    display: block;
+  }
+  .projects {
+    @include align(center, center);
+    position: relative;
+    border-radius: 20px;
+    border: 3px dashed $lightblue1;
+    display: inline-table;
+    width: $projectwidth;
+    height: $projectheight;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: $projectpadding;
+    padding-right: 20px;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+    }
+    h1 {
+      @include setupfont($arimamadurai, 35px, $blue);
+    }
+    h2 {
+      @include setupfont($arimamadurai, 20px, $darkfont);
+    }
+    .learnmorebutton{
+      @extend .learnmore;
+      position: absolute;
+      bottom: 25px;
+      left: $projectpadding + 0.5 * ($projectwidth - $learnmorewidth);
+    }
   }
 }
 
-#portfolio {
-
+a {
+  text-decoration: none;
 }
+
+.learnmore {
+  margin: auto;
+  border: 1px solid $blue;
+  width: $learnmorewidth;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  p {
+    margin: 12px 60px 12px 60px;
+    @include setupfont($quicksand, 16px, $blue);
+  }
+}
+
 
 #skills {
 
@@ -92,12 +156,14 @@ body {
 }
 
 p {
+  word-wrap: break-word;
   color: $darkfont;
   font-size: 18px;
   font-family: $athiti;
 }
 
 bio-h1 {
+  margin: $containerpadding $containerpadding $containerpadding $containerpadding;
   font-weight: bold;
   color: $blue;
   font-size: 40px;
