@@ -1,14 +1,14 @@
 body {
   background-color: white; }
 
-#container {
+.container {
   width: 100%;
-  height: 600px;
+  height: 800px;
   position: relative; }
 
 #mainlogo {
   position: absolute;
-  top: 50%;
+  top: 282.5px;
   right: 50%;
   display: inline-block; }
   #mainlogo img {
@@ -20,7 +20,7 @@ body {
   word-wrap: break-word;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 282.5px;
   display: inline-block;
   padding-left: 50px; }
   #bio .icon {
@@ -31,11 +31,20 @@ body {
       height: 50px; }
 
 #projects {
-  background-color: #e6e6e6; }
+  border-color: #63C6E3;
+  border-style: solid;
+  border-width: 10px;
+  height: 800px;
+  padding: 20px; }
+  #projects h1 {
+    font-family: "Arima Madurai", cursive;
+    font-size: 60px;
+    text-align: center;
+    color: #63C6E3; }
 
 #bigcircle {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%; }
 
 p {
@@ -48,13 +57,5 @@ bio-h1 {
   color: #63C6E3;
   font-size: 40px;
   font-family: "Arima Madurai", cursive; }
-
-bio-h2 {
-  color: #595959;
-  font-size: 18px;
-  font-family: "Athiti", sans-serif; }
-
-a {
-  target: _blank; }
 
 /*# sourceMappingURL=index.css.map */
