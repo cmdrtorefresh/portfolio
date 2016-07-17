@@ -19,14 +19,18 @@ $quicksand: 'Quicksand', sans-serif;
 // Dimensions
 $divheight: 800px;
 $divwidth: 100%;
-$mainlogoheight: 235px;
-$mainlogowidth: 600px;
-$welcomepagetop: 0.5 * ($divheight - $mainlogoheight);
-$containerpadding: 20px;
+$mainlogowidth: 40%;
+$mainlogoheight: auto;
+$biowidth: 500px;
+$biopaddingleft: 50px;
+$socialiconwidth: 50px;
+$socialiconheight: 50px;
+$intersocialicon: 15px;
 $projectheight: 575px;
 $projectwidth: 300px;
 $learnmorewidth: 250px;
 $projectpadding: 20px;
+
 
 // Colors
 $lightblue1: #b3ecff;
@@ -44,37 +48,70 @@ body {
 
 .container {
     width: $divwidth;
-    height: $divheight;
+    height: auto;
     position: relative;
+    display: block;
 }
 
-#mainlogo {
-  position: absolute;
-  top: $welcomepagetop;
-  right: 50%;
-  display: inline-block;
+#welcomepage {
+  @include align(center, center);
+  height: $divheight;
+  position: relative;
   img {
+    position: absolute;
+    top: 0.4 * ($divheight);
+    right: 50%;
     width: $mainlogowidth;
     height: $mainlogoheight;
+    display: inline-table;
+    margin-left: 50px;
   }
-}
-
-#bio {
-  width: $divwidth/3;
-  position: absolute;
-  left: 50%;
-  top: $welcomepagetop;
-  display: inline-block;
-  padding-left: 50px;
-  .icon {
-    display: inline-block;
-    img {
-      margin-left: 15px;
-      width: 50px;
-      height: 50px;
+  #bio {
+    margin-right: 200px;
+    margin-left: $biopaddingleft;
+    position: relative;
+    top: 0.4 * ($divheight);
+    left: 0.50 * $divwidth;
+    width: $biowidth;
+    @include align(left, left);
+    h1 {
+      @include setupfont($arimamadurai, 40px, $blue);
+      font-weight: bold;
+    }
+    #icons {
+      @include align(left, left);
+      img {
+        width: $socialiconwidth;
+        height: $socialiconheight;
+      }
+      height: $socialiconheight + 5px;
+      #emailicon {
+        background-image: url("../images/email.png");
+        @extend .iconbutton;
+        left: 0px;
+      }
+      #blogicon {
+        background-image: url("../images/blog.png");
+        @extend .iconbutton;
+        left: $socialiconwidth + $intersocialicon;
+      }
+      #githubicon {
+        background-image: url("../images/github.png");
+        @extend .iconbutton;
+        left: 2 * $socialiconwidth + 2 * $intersocialicon;
+      }
     }
   }
 }
+
+.iconbutton {
+  width: $socialiconwidth;
+  height: $socialiconheight;
+  position: absolute;
+  bottom: 0px;
+  background-size: contain;
+}
+
 
 #portfolio {
   @include align(center, center);
@@ -160,12 +197,4 @@ p {
   color: $darkfont;
   font-size: 18px;
   font-family: $athiti;
-}
-
-bio-h1 {
-  margin: $containerpadding $containerpadding $containerpadding $containerpadding;
-  font-weight: bold;
-  color: $blue;
-  font-size: 40px;
-  font-family: $arimamadurai;
 }

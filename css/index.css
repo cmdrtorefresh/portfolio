@@ -3,31 +3,60 @@ body {
 
 .container {
   width: 100%;
+  height: auto;
+  position: relative;
+  display: block; }
+
+#welcomepage {
+  align-content: center;
+  text-align: center;
   height: 800px;
   position: relative; }
+  #welcomepage img {
+    position: absolute;
+    top: 320px;
+    right: 50%;
+    width: 40%;
+    height: auto;
+    display: inline-table;
+    margin-left: 50px; }
+  #welcomepage #bio {
+    margin-right: 200px;
+    margin-left: 50px;
+    position: relative;
+    top: 320px;
+    left: 50%;
+    width: 500px;
+    align-content: left;
+    text-align: left; }
+    #welcomepage #bio h1 {
+      font-family: "Arima Madurai", cursive;
+      color: #63C6E3;
+      font-size: 40px;
+      font-weight: bold; }
+    #welcomepage #bio #icons {
+      align-content: left;
+      text-align: left;
+      height: 55px; }
+      #welcomepage #bio #icons img {
+        width: 50px;
+        height: 50px; }
+      #welcomepage #bio #icons #emailicon {
+        background-image: url("../images/email.png");
+        left: 0px; }
+      #welcomepage #bio #icons #blogicon {
+        background-image: url("../images/blog.png");
+        left: 65px; }
+      #welcomepage #bio #icons #githubicon {
+        background-image: url("../images/github.png");
+        left: 130px; }
 
-#mainlogo {
+.iconbutton, #welcomepage #bio #icons #emailicon, #welcomepage #bio #icons #blogicon, #welcomepage #bio #icons #githubicon {
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: 282.5px;
-  right: 50%;
-  display: inline-block; }
-  #mainlogo img {
-    width: 600px;
-    height: 235px; }
-
-#bio {
-  width: 33.33333%;
-  position: absolute;
-  left: 50%;
-  top: 282.5px;
-  display: inline-block;
-  padding-left: 50px; }
-  #bio .icon {
-    display: inline-block; }
-    #bio .icon img {
-      margin-left: 15px;
-      width: 50px;
-      height: 50px; }
+  bottom: 0px;
+  background-size: contain; }
 
 #portfolio {
   align-content: center;
@@ -107,12 +136,5 @@ p {
   color: #595959;
   font-size: 18px;
   font-family: "Athiti", sans-serif; }
-
-bio-h1 {
-  margin: 20px 20px 20px 20px;
-  font-weight: bold;
-  color: #63C6E3;
-  font-size: 40px;
-  font-family: "Arima Madurai", cursive; }
 
 /*# sourceMappingURL=index.css.map */
