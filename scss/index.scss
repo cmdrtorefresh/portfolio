@@ -17,10 +17,15 @@ $arimamadurai: 'Arima Madurai', cursive;
 $quicksand: 'Quicksand', sans-serif;
 
 // Dimensions
-$divheight: 800px;
+$divheight: 750px;
 $divwidth: 100%;
-$mainlogowidth: 40%;
+
+$mainlogowidth: 35%;
 $mainlogoheight: auto;
+$mainlogominwidth: 200px;
+$mainlogominheight: auto;
+
+
 $biowidth: 500px;
 $biopaddingleft: 50px;
 $socialiconwidth: 50px;
@@ -54,28 +59,31 @@ body {
 }
 
 #welcomepage {
-  @include align(center, center);
   height: $divheight;
   position: relative;
-  img {
+  #logo {
     position: absolute;
-    top: 0.4 * ($divheight);
-    right: 50%;
-    width: $mainlogowidth;
-    height: $mainlogoheight;
+    bottom: 20px;
+    right: 10px;
+    max-width: 80%;
+    background-image: url("../images/cmdr2lines.png");
+    opacity: 0.3;
+    width: 600px;
+    height: 235px;
+    background-size: cover;
     display: inline-table;
-    margin-left: 50px;
+    margin-right: 30px;
   }
   #bio {
-    margin-right: 200px;
-    margin-left: $biopaddingleft;
     position: relative;
-    top: 0.4 * ($divheight);
-    left: 0.50 * $divwidth;
-    width: $biowidth;
+    top: 10%;
+    left: 10%;
+    width: 40%;
+    max-width: 90%;
+    display: inline-block;
     @include align(left, left);
     h1 {
-      @include setupfont($arimamadurai, 40px, $blue);
+      @include setupfont($arimamadurai, 50px, $blue);
       font-weight: bold;
     }
     #icons {
@@ -103,6 +111,7 @@ body {
     }
   }
 }
+
 
 .iconbutton {
   width: $socialiconwidth;
