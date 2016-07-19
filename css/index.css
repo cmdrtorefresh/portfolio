@@ -43,17 +43,8 @@ body {
       #welcomepage #bio #icons img {
         width: 50px;
         height: 50px; }
-      #welcomepage #bio #icons #emailicon {
-        background-image: url("../images/email.png");
-        left: 0px; }
-      #welcomepage #bio #icons #blogicon {
-        background-image: url("../images/blog.png");
-        left: 65px; }
-      #welcomepage #bio #icons #githubicon {
-        background-image: url("../images/github.png");
-        left: 130px; }
 
-.iconbutton, #welcomepage #bio #icons #emailicon, #welcomepage #bio #icons #blogicon, #welcomepage #bio #icons #githubicon {
+.iconbutton, #welcomepage #bio #icons .icon {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -68,22 +59,10 @@ body {
   border-width: 10px;
   height: auto;
   padding-bottom: 50px; }
-  #portfolio h1 {
-    font-family: "Arima Madurai", cursive;
-    color: #63C6E3;
-    font-size: 50px;
-    display: block; }
-  #portfolio h3 {
-    font-family: "Arima Madurai", cursive;
-    color: #595959;
-    font-size: 30px;
-    display: block; }
   #portfolio .projects {
     align-content: center;
     text-align: center;
     position: relative;
-    border-radius: 20px;
-    border: 3px dashed #b3ecff;
     display: inline-table;
     width: 300px;
     height: 575px;
@@ -111,6 +90,19 @@ body {
       bottom: 25px;
       left: 45px; }
 
+pagetitle {
+  font-family: "Arima Madurai", cursive;
+  color: #63C6E3;
+  font-size: 50px;
+  display: block; }
+
+pagesubtitle {
+  padding-top: 40px;
+  font-family: "Arima Madurai", cursive;
+  color: #595959;
+  font-size: 30px;
+  display: block; }
+
 a {
   text-decoration: none; }
 
@@ -127,6 +119,35 @@ a {
     font-family: "Quicksand", sans-serif;
     color: #63C6E3;
     font-size: 16px; }
+
+#skills {
+  position: relative;
+  align-content: center;
+  text-align: center;
+  background: #63C6E3;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #63C6E3, #b3ecff);
+  /* For Safari */
+  background: -o-linear-gradient(bottom right, #63C6E3, #b3ecff);
+  /* For Opera */
+  background: -moz-linear-gradient(bottom right, #63C6E3, #b3ecff);
+  /* For Firefox */
+  background: linear-gradient(to bottom right, #63C6E3, #b3ecff);
+  /* Standard syntax */
+  height: auto;
+  min-height: 750px; }
+  #skills .skill {
+    position: relative;
+    display: inline-table;
+    width: 300px;
+    height: 200px; }
+  #skills #skillmenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.5); }
 
 #bigcircle {
   width: 300px;
