@@ -9,19 +9,16 @@ app.controller('indexController', function($scope) {
         {
           image: "images/email.png",
           link: "mailto:cmdrtorefresh@gmail.com?Subject=Hello!",
-          left: "0px",
           target: "_self"
         },
         {
           image: "images/blog.png",
           link: "https://cmdrtorefresh.blogspot.com",
-          left: "65px",
           target: "_blank"
         },
         {
           image: "images/github.png",
           link: "https://github.com/cmdrtorefresh",
-          left: "130px",
           target: "_blank"
         }
   ];
@@ -34,7 +31,8 @@ app.controller('indexController', function($scope) {
         tagline: "For tangueros on the go!",
         subtitle: "iOS App",
         desc: "Swift Language, Firebase SDK for iOS, Google Maps SDK for iOS, Forward Geocoding with Google Maps API",
-        link: "https://www.google.com"
+        link: "https://www.google.com",
+        buttontext: "LEARN MORE"
       },
       {
         image: "images/pandemicbluegraph.png",
@@ -42,7 +40,8 @@ app.controller('indexController', function($scope) {
         tagline: "Play it without the board!",
         subtitle: "Command Line Game",
         desc: "Ruby Language, Graph Data Structure",
-        link: "https://www.google.com"
+        link: "https://www.google.com",
+        buttontext: "LEARN MORE"
       },
       {
         image: "images/cmdrsquare.png",
@@ -50,10 +49,33 @@ app.controller('indexController', function($scope) {
         tagline: "Also proudly created from scratch!",
         subtitle: "Portfolio Website",
         desc: "HTML, CSS, SASS, AngularJS",
-        link: "http://www.cmdrtorefresh.comxa.com"
+        link: "http://www.cmdrtorefresh.comxa.com",
+        buttontext: "GO TO THE TOP"
       }
   ];
 
+  $scope.skilllist = [
+    {
+      subject: "Computer Language",
+      items: ["Ruby", "Swift", "Python", "JavaScript"]
+    },
+    {
+      subject: "Front End",
+      items: ["HTML", "CSS", "SASS", "AngularJS", "jQuery"]
+    },
+    {
+      subject: "Database",
+      items: ["PostgreSQL(SQL)","Firebase"]
+    },
+    {
+      subject: "SDK & IDE",
+      items: ["Firebase SDK", "GoogleMaps SDK", "XCode IDE"]
+    },
+    {
+      subject: "Human Language",
+      items: ["English","Indonesian"]
+    }
+  ];
 
 });
 
