@@ -28,7 +28,7 @@ body {
     left: 10%;
     width: 40%;
     max-width: 90%;
-    display: inline-block;
+    display: block;
     align-content: left;
     text-align: left; }
     #welcomepage #bio h1 {
@@ -36,20 +36,17 @@ body {
       color: #63C6E3;
       font-size: 50px;
       font-weight: bold; }
-    #welcomepage #bio #icons {
-      align-content: left;
-      text-align: left;
-      height: 55px; }
-      #welcomepage #bio #icons img {
-        width: 50px;
-        height: 50px; }
 
-.iconbutton, #welcomepage #bio #icons .icon {
+.socialicon {
+  background-size: cover;
   width: 50px;
   height: 50px;
-  position: absolute;
-  bottom: 0px;
-  background-size: contain; }
+  display: inline-table;
+  margin-right: 15px; }
+
+#icons {
+  background-color: red;
+  height: 55px; }
 
 #portfolio {
   align-content: center;

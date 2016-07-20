@@ -67,7 +67,6 @@ body {
 }
 
 #welcomepage {
-  // height: $divheight;
   height: $divheight;
   position: relative;
   #logo {
@@ -89,35 +88,27 @@ body {
     left: 10%;
     width: 40%;
     max-width: 90%;
-    display: inline-block;
+    display: block;
     @include align(left, left);
     h1 {
       @include setupfont($arimamadurai, 50px, $blue);
       font-weight: bold;
     }
-    #icons {
-      @include align(left, left);
-      img {
-        width: $socialiconwidth;
-        height: $socialiconheight;
-      }
-      height: $socialiconheight + 5px;
-      .icon {
-        @extend .iconbutton;
-      }
-    }
   }
 }
 
-
-.iconbutton {
+.socialicon {
+  background-size: cover;
   width: $socialiconwidth;
   height: $socialiconheight;
-  position: absolute;
-  bottom: 0px;
-  background-size: contain;
+  // display: inline-table;
+  margin-right: $intersocialicon;
 }
 
+#icons {
+    background-color: red;
+    height: $socialiconheight + 5px;
+}
 
 #portfolio {
   @include align(center, center);

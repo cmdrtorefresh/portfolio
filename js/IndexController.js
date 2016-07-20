@@ -1,29 +1,32 @@
+// Social Icon Tiles
+
 var app = angular.module('indexApp',[]);
 
-// app.controller('SocialIconsController', ['$scope', function($scope) {
-//   $scope.icons = [
-//         {
-//           icon: "email",
-//           image-url: "../images/email.png",
-//           linkto: "mailto:cmdrtorefresh@gmail.com?Subject=Hello!",
-//           left: "0px"
-//         },
-//         {
-//           icon: "blog",
-//           image-url: "../images/blog.png",
-//           linkto: "https://cmdrtorefresh.blogspot.com",
-//           left: "65px"
-//         },
-//         {
-//           icon: "github",
-//           image-ur: "../images/github.png",
-//           linkto: "https://github.com/cmdrtorefresh"
-//           left: "130px"
-//         }
-//   ;]
-// }]);
+app.controller('indexController', function($scope) {
 
-app.controller('ProjectsController', function($scope) {
+  // Social Icon Tiles
+  $scope.iconlist = [
+        {
+          image: "images/email.png",
+          link: "mailto:cmdrtorefresh@gmail.com?Subject=Hello!",
+          left: "0px",
+          target: "_self"
+        },
+        {
+          image: "images/blog.png",
+          link: "https://cmdrtorefresh.blogspot.com",
+          left: "65px",
+          target: "_blank"
+        },
+        {
+          image: "images/github.png",
+          link: "https://github.com/cmdrtorefresh",
+          left: "130px",
+          target: "_blank"
+        }
+  ];
+
+  // Project Tiles
   $scope.projectlist = [
       {
         image: "images/yumba.png",
@@ -50,21 +53,18 @@ app.controller('ProjectsController', function($scope) {
         link: "http://www.cmdrtorefresh.comxa.com"
       }
   ];
+
+
 });
 
-app.controller('PageTitlesController', ['$scope', function($scope) {
-  $scope.pages = [
-    {
-      title: "Portfolio",
-      subtitle: "Good stuffs made from scratch!"
-    },
-    {
-      title: "Skills",
-      subtitle: "Good stuffs she's made of"
-    },
-    {
-      title: "Experience",
-      subtitle: "Good stuffs she's done"
-    },
-  ];
-}]);
+
+
+app.directive('backImg', function(){
+    return function(scope, element, attrs){
+        var url = attrs.backImg;
+        element.css({
+            'background-image': 'url(' + url +')',
+            'background-size' : 'cover'
+        });
+    };
+});
