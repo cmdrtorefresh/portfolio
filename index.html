@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Load CSS -->
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+
+    <!-- Load Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Athiti|Quicksand" rel="stylesheet"/>
+
+    <!-- Load AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <!-- Load AngularJS script file -->
+    <script src="js/IndexController.js"></script>
+
+  <title>cmd + R to Refresh</title>
+  </head>
+
+  <body ng-app="indexApp" ng-controller="indexController">
+
+
+    <div class="container">
+      <div id="welcomepage">
+        <div id="bio">
+          <h1>Stephanie Kirtiadi</h1>
+          <p>
+            A challenge-loving software engineer looking for a full-time Web or iOS Development position in the Bay Area.<br><br>
+            Driven. Self-motivated. Likes learning. And Yoga.
+          </p>
+
+          <a ng-repeat ="icon in iconlist" href="{{ icon.link }}"><div class="socialicon" back-img="{{ icon.image }}"></div></a>
+        </div>
+      <div id="logo"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="portfolio">
+        <pagesubtitle>Good stuffs written from scratch!</pagesubtitle>
+        <div class="projects" ng-repeat="project in projectlist">
+          <img ng-src="{{ project.image }}"/>
+          <h1>{{ project.title }}</h1>
+          <h2>{{ project.tagline }}</h2>
+          <p>{{ project.subtitle }}</p>
+          <p>{{ project.desc }}</p>
+          <a ng-href="{{ project.link }}"><div class="learnmorebutton"><p>{{ project.buttontext }}</p></div></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="skills">
+        <pagesubtitle>Good stuffs she's made of</pagesubtitle>
+        <div class="bigcircle" ng-repeat="skill in skilllist">
+          <h1>{{ skill.subject }}</h1>
+          <li ng-repeat="item in skill.items">{{ item }}</li>
+        </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,5 +1,6 @@
 body {
-  background-color: white; }
+  background-color: white;
+  margin: 0px; }
 
 .container {
   width: 100%;
@@ -8,55 +9,42 @@ body {
   display: block; }
 
 #welcomepage {
-  align-content: center;
-  text-align: center;
-  height: 800px;
+  height: 750px;
   position: relative; }
-  #welcomepage img {
+  #welcomepage #logo {
     position: absolute;
-    top: 320px;
-    right: 50%;
-    width: 40%;
-    height: auto;
+    bottom: 20px;
+    right: 10px;
+    max-width: 80%;
+    background-image: url("../images/cmdr2lines.png");
+    opacity: 0.3;
+    width: 600px;
+    height: 235px;
+    background-size: cover;
     display: inline-table;
-    margin-left: 50px; }
+    margin-right: 30px; }
   #welcomepage #bio {
-    margin-right: 200px;
-    margin-left: 50px;
     position: relative;
-    top: 320px;
-    left: 50%;
-    width: 500px;
+    top: 10%;
+    left: 10%;
+    width: 40%;
+    max-width: 90%;
+    display: block;
     align-content: left;
     text-align: left; }
     #welcomepage #bio h1 {
       font-family: "Arima Madurai", cursive;
       color: #63C6E3;
-      font-size: 40px;
+      font-size: 50px;
       font-weight: bold; }
-    #welcomepage #bio #icons {
-      align-content: left;
-      text-align: left;
-      height: 55px; }
-      #welcomepage #bio #icons img {
-        width: 50px;
-        height: 50px; }
-      #welcomepage #bio #icons #emailicon {
-        background-image: url("../images/email.png");
-        left: 0px; }
-      #welcomepage #bio #icons #blogicon {
-        background-image: url("../images/blog.png");
-        left: 65px; }
-      #welcomepage #bio #icons #githubicon {
-        background-image: url("../images/github.png");
-        left: 130px; }
 
-.iconbutton, #welcomepage #bio #icons #emailicon, #welcomepage #bio #icons #blogicon, #welcomepage #bio #icons #githubicon {
+.socialicon {
+  background-size: cover;
   width: 50px;
   height: 50px;
-  position: absolute;
-  bottom: 0px;
-  background-size: contain; }
+  display: inline-table;
+  margin-top: 20px;
+  margin-right: 15px; }
 
 #portfolio {
   align-content: center;
@@ -66,22 +54,14 @@ body {
   border-width: 10px;
   height: auto;
   padding-bottom: 50px; }
-  #portfolio h1 {
-    font-family: "Arima Madurai", cursive;
-    color: #63C6E3;
-    font-size: 50px;
-    display: block; }
-  #portfolio h3 {
-    font-family: "Arima Madurai", cursive;
-    color: #595959;
-    font-size: 30px;
-    display: block; }
   #portfolio .projects {
     align-content: center;
     text-align: center;
     position: relative;
     border-radius: 20px;
-    border: 3px dashed #b3ecff;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
     display: inline-table;
     width: 300px;
     height: 575px;
@@ -109,6 +89,19 @@ body {
       bottom: 25px;
       left: 45px; }
 
+pagetitle {
+  font-family: "Arima Madurai", cursive;
+  color: #63C6E3;
+  font-size: 50px;
+  display: block; }
+
+pagesubtitle {
+  padding-top: 40px;
+  font-family: "Arima Madurai", cursive;
+  color: #595959;
+  font-size: 30px;
+  display: block; }
+
 a {
   text-decoration: none; }
 
@@ -120,18 +113,49 @@ a {
   border-radius: 10px;
   background-color: white;
   text-align: center; }
-  .learnmore p, #portfolio .projects .learnmorebutton p {
+  .learnmore p, #portfolio .projects .learnmorebutton p, .learnmore .bigcircle li, .bigcircle .learnmore li, #portfolio .projects .learnmorebutton .bigcircle li, .bigcircle #portfolio .projects .learnmorebutton li {
     margin: 12px 60px 12px 60px;
     font-family: "Quicksand", sans-serif;
     color: #63C6E3;
     font-size: 16px; }
 
-#bigcircle {
+#skills {
+  position: relative;
+  align-content: center;
+  text-align: center;
+  background: #63C6E3;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #63C6E3, #b3ecff);
+  /* For Safari */
+  background: -o-linear-gradient(bottom right, #63C6E3, #b3ecff);
+  /* For Opera */
+  background: -moz-linear-gradient(bottom right, #63C6E3, #b3ecff);
+  /* For Firefox */
+  background: linear-gradient(to bottom right, #63C6E3, #b3ecff);
+  /* Standard syntax */
+  height: auto;
+  min-height: 750px; }
+
+.bigcircle {
+  align-content: center;
+  text-align: center;
+  margin: 40px;
+  padding: 30px;
+  background-color: white;
+  -moz-box-shadow: 0 0 20px #595959;
+  -webkit-box-shadow: 0 0 20px #595959;
+  box-shadow: 0 0 20px #595959;
   width: 300px;
   height: 300px;
-  border-radius: 100%; }
+  border-radius: 100%;
+  display: inline-table; }
+  .bigcircle h1 {
+    margin-top: 50px;
+    font-family: "Arima Madurai", cursive;
+    color: #63C6E3;
+    font-size: 30px; }
 
-p {
+p, .bigcircle li {
   word-wrap: break-word;
   color: #595959;
   font-size: 18px;
