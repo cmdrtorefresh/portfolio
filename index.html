@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 
     <!-- Load AngularJS script file -->
-    <script src="js/IndexController.js"></script>
+    <script src="js/indexcontroller.js"></script>
 
   <title>cmd + R to Refresh</title>
   </head>
@@ -53,7 +53,7 @@
         <pagesubtitle>Good stuffs she's made of</pagesubtitle>
         <div class="bigcircle" ng-repeat="skill in skilllist">
           <h1>{{ skill.subject }}</h1>
-          <li ng-repeat="item in skill.items">{{ item }}</li>
+          <p ng-repeat="item in skill.items">{{ item }}</p>
         </div>
       </div>
     </div>

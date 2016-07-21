@@ -1,5 +1,3 @@
-// Social Icon Tiles
-
 var app = angular.module('indexApp',[]);
 
 app.controller('indexController', function($scope) {
@@ -61,7 +59,7 @@ app.controller('indexController', function($scope) {
     },
     {
       subject: "Front End",
-      items: ["HTML", "CSS", "SASS", "AngularJS", "jQuery"]
+      items: ["HTML / CSS", "SASS", "AngularJS", "jQuery"]
     },
     {
       subject: "Database",

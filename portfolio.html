@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Load CSS -->
+    <link type="text/css" rel="stylesheet" href="css/portfolio.css"/>
+
+    <!-- Load Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Athiti|Quicksand" rel="stylesheet">
+
+    <!-- Load AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <!-- Load AngularJS script file -->
+    <script src="js/portfoliocontroller.js"></script>
+
+  <title>cmd + R to Refresh - Portfolio</title>
+  </head>
+
+  <body ng-app="portfolioApp" ng-controller="portfolioController">
+
+    <h1>Portfolio</h1>
+
+    <div class="container" ng-repeat="project in projects">
+      <div class="left">
+        <img ng-src="{{ project.image }}"/>
+        <h2>{{ project.title }}</h2>
+        <h3>{{ project.tagline }}</h3>
+        <p><span>What kind of project is this?</span> {{ project.type }}</p>
+        <p><span>What is it written in?</span> {{ project.tool }}</p>
+      </div>
+
+      <div class="right">
+        <h4>So, what's the story?</h4>
+        <p>{{ project.purpose }}</p>
+        <a target="_blank" ng-href="{{ project.link }}"><linkbutton><p>GO TO PROJECT</p></linkbutton></a>
+      </div>
+    </div>
+  </body>
+<html>

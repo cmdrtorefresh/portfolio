@@ -199,17 +199,19 @@ a {
     margin: 40px;
     padding: 30px;
     background-color: white;
-    @include shadow_around_div(20px, $darkfont);
-    width: 300px;
-    height: 300px;
+    @include shadow_around_div(10px, #8c8c8c);
+    width: 250px;
+    height: 250px;
     border-radius: 100%;
     display: inline-table;
     h1 {
       margin-top: 50px;
-      @include setupfont($arimamadurai, 30px, $blue);
+      @include setupfont($arimamadurai, 25px, $blue);
     }
-    li {
-      @extend p
+    p {
+      @extend p;
+      font-size: 24px;
+      line-height: 0.8;
     }
 }
 
