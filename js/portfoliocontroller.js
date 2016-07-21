@@ -3,6 +3,7 @@ var app = angular.module('portfolioApp',[]);
 app.controller('portfolioController', function($scope) {
   $scope.projects = [
     {
+      id: "yumba",
       image: "images/yumba.png",
       title: "Yumba",
       tagline: "For Tango Dancers on the Go!",
@@ -12,6 +13,7 @@ app.controller('portfolioController', function($scope) {
       link: "https://cmdrtorefresh.blogspot.com/2016/07/yumba-ios-tango-app.html"
     },
     {
+      id: "pandemic",
       image: "images/pandemicbluegraph.png",
       title: "Pandemic",
       tagline: "Play the game without the board!",
@@ -21,6 +23,7 @@ app.controller('portfolioController', function($scope) {
       link: "https://github.com/cmdrtorefresh/pandemic"
     },
     {
+      id: "webpage",
       image: "images/cmdrsquare.png",
       title: "Cmd + R Webpage",
       tagline: "Where they all merge",

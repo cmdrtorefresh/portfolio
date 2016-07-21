@@ -29,7 +29,7 @@ app.controller('indexController', function($scope) {
         tagline: "For tangueros on the go!",
         subtitle: "iOS App",
         desc: "Swift Language, Firebase SDK for iOS, Google Maps SDK for iOS, Forward Geocoding with Google Maps API",
-        link: "https://www.google.com",
+        link: "portfolio.html#yumba",
         buttontext: "LEARN MORE"
       },
       {
@@ -38,7 +38,7 @@ app.controller('indexController', function($scope) {
         tagline: "Play it without the board!",
         subtitle: "Command Line Game",
         desc: "Ruby Language, Graph Data Structure",
-        link: "https://www.google.com",
+        link: "portfolio.html#pandemic",
         buttontext: "LEARN MORE"
       },
       {
@@ -47,7 +47,7 @@ app.controller('indexController', function($scope) {
         tagline: "Also proudly created from scratch!",
         subtitle: "Portfolio Website",
         desc: "HTML, CSS, SASS, AngularJS",
-        link: "http://www.cmdrtorefresh.comxa.com",
+        link: "#welcomepage",
         buttontext: "GO TO THE TOP"
       }
   ];
