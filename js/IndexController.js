@@ -2,6 +2,25 @@ var app = angular.module('indexApp',[]);
 
 app.controller('indexController', function($scope) {
 
+  $scope.pages = [
+    {
+      title: "HOME",
+      link: "index.html"
+    },
+    {
+      title: "PORTFOLIO",
+      link: "portfolio.html"
+    },
+    {
+      title: "WHO I AM",
+      link: "background.html"
+    },
+    {
+      title: "CONTACT ME",
+      link: "contact.html"
+    }
+  ];
+
   // Social Icon Tiles
   $scope.iconlist = [
         {

@@ -1,6 +1,26 @@
 var app = angular.module('portfolioApp',[]);
 
 app.controller('portfolioController', function($scope) {
+
+  $scope.pages = [
+    {
+      title: "HOME",
+      link: "index.html"
+    },
+    {
+      title: "PORTFOLIO",
+      link: "portfolio.html"
+    },
+    {
+      title: "WHO I AM",
+      link: "background.html"
+    },
+    {
+      title: "CONTACT ME",
+      link: "contact.html"
+    }
+  ];
+
   $scope.projects = [
     {
       id: "yumba",
@@ -28,7 +48,7 @@ app.controller('portfolioController', function($scope) {
       title: "Cmd + R Webpage",
       tagline: "Where they all merge",
       type: "A Portfolio Website",
-      tool: "HTML/CSS, SASS, AngularJS",
+      tool: "HTML/CSS, SASS, AngularJS, jQuery",
       purpose: "The purpose is two-fold. I want an exercise to refresh my front end stuffs and I need an actual webpage for my portfolio. Just like the other projects, it's made entirely from scratch. It deepens my understanding of the power and limitations of AngularJS. All artworks are also self-made to avoid any troubles.",
       link: "http://cmdrtorefresh.comxa.com"
     }
