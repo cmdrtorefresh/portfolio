@@ -60,13 +60,15 @@ $darkblue2: #004d66;
 $darkblue3: #002533;
 $lightgrey: #e6e6e6;
 $darkfont: #595959;
+$bodycolor: #1a1a1a;
 
 body {
-  background-color: white;
+  background-color: $bodycolor;
   margin: 0px;
 }
 
 .container {
+    background-color: white;
     width: $divwidth;
     height: auto;
     position: relative;
@@ -91,7 +93,7 @@ body {
   }
   #bio {
     position: relative;
-    top: 10%;
+    top: 20%;
     left: 10%;
     width: 40%;
     max-width: 90%;
@@ -220,4 +222,25 @@ p {
   color: $darkfont;
   font-size: 18px;
   font-family: $athiti;
+}
+
+#topmenu {
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 75px;
+  background-color: $bodycolor;
+}
+
+#footer {
+  padding: 5px;
+  bottom: 0px;
+  width: 100%;
+  height: 75px;
+  background-color: $bodycolor;
+  @include align(center, center);
+  p {
+    @include setupfont($athiti, 20px, white);
+  }
 }

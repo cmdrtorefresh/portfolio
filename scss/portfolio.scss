@@ -37,6 +37,8 @@ $columnpadding: 20px;
 $rightcolumnwidth: 400px;
 $leftcolumnwidth: 400px;
 $learnmorewidth: 300px;
+$menuheight: 75px;
+$footerheight: 75px;
 
 
 //Colors
@@ -48,17 +50,24 @@ $darkblue2: #004d66;
 $darkblue3: #002533;
 $lightgrey: #e6e6e6;
 $darkfont: #595959;
+$bodycolor: #1a1a1a;
 
 
 
 body {
-  padding-top: 30px;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 30px;
+  background-color: $bodycolor;
   margin: 0px;
   background-image: url(../images/pattern.png);
   background-repeat: repeat-y;
+}
+
+#bodywrapper {
+  margin: 0px;
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 15%;
+  padding-right: 15%;
+  position: relative;
 }
 
 .container {
@@ -161,4 +170,25 @@ span {
   @include setupfont($athiti, 22px, $blue);
   font-weight: normal;
   line-height: 0.8;
+}
+
+#topmenu {
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 75px;
+  background-color: $bodycolor;
+}
+
+#footer {
+  padding: 5px;
+  bottom: 0px;
+  width: 100%;
+  height: $footerheight;
+  background-color: $bodycolor;
+  @include align(center, center);
+  p {
+    @include setupfont($athiti, 20px, white);
+  }
 }

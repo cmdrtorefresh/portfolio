@@ -1,11 +1,16 @@
 body {
-  padding-top: 30px;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 30px;
+  background-color: #1a1a1a;
   margin: 0px;
   background-image: url(../images/pattern.png);
   background-repeat: repeat-y; }
+
+#bodywrapper {
+  margin: 0px;
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 15%;
+  padding-right: 15%;
+  position: relative; }
 
 .container {
   align-self: center;
@@ -110,5 +115,26 @@ span {
   font-size: 22px;
   font-weight: normal;
   line-height: 0.8; }
+
+#topmenu {
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 75px;
+  background-color: #1a1a1a; }
+
+#footer {
+  padding: 5px;
+  bottom: 0px;
+  width: 100%;
+  height: 75px;
+  background-color: #1a1a1a;
+  align-content: center;
+  text-align: center; }
+  #footer p {
+    font-family: "Athiti", sans-serif;
+    color: white;
+    font-size: 20px; }
 
 /*# sourceMappingURL=portfolio.css.map */
