@@ -1,0 +1,134 @@
+// Mixins
+@mixin setupfont($family, $size, $color){
+  font-family: $family;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin align($content, $text: center){
+  align-content: $content;
+  text-align: $text;
+}
+
+@mixin gradient_background($color1,$color2) {
+  background: $color1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, $color1, $color2); /* For Safari */
+  background: -o-linear-gradient(bottom right, $color1, $color2); /* For Opera */
+  background: -moz-linear-gradient(bottom right, $color1, $color2); /* For Firefox */
+  background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
+}
+
+@mixin shadow_around_div($blurradius, $color){
+  -moz-box-shadow: 0 0 $blurradius $color;
+  -webkit-box-shadow: 0 0 $blurradius $color;
+  box-shadow: 0 0 $blurradius $color;
+}
+
+
+// Fonts
+$athiti: 'Athiti', sans-serif;
+$arimamadurai: 'Arima Madurai', cursive;
+$quicksand: 'Quicksand', sans-serif;
+
+// Dimensions
+$menuheight: 75px;
+$footerheight: 75px;
+$picturewidth: 500px;
+$pictureheight: 1.25 * $picturewidth;
+
+// Colors
+$lightblue1: #b3ecff;
+$lightblue2: #80dfff;
+$blue: #63C6E3;
+$darkblue1: #0086b3;
+$darkblue2: #004d66;
+$darkblue3: #002533;
+$lightgrey: #e6e6e6;
+$darkfont: #595959;
+$bodycolor: #1a1a1a;
+$containercolor: #d9e5d1;
+
+body {
+  background-color: $bodycolor;
+  margin: 0px;
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+}
+
+#description {
+  padding: 50px;
+  vertical-align: top;
+  width: 60%;
+  height: auto;
+}
+
+#picture {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  vertical-align: top;
+  background-image: url("../images/biopic.jpeg");
+  background-size: cover;
+  width: $picturewidth;
+  height: $pictureheight;
+  max-width: 30%;
+}
+
+h1 {
+  @include setupfont($athiti, 50px, $darkfont);
+}
+
+p {
+  word-wrap: break-word;
+  color: $darkfont;
+  font-size: 18px;
+  font-family: $athiti;
+}
+
+#topmenu {
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: $menuheight;
+  background-color: $bodycolor;
+}
+
+#footer {
+  padding: 5px;
+  bottom: 0px;
+  width: 100%;
+  height: $footerheight;
+  background-color: $bodycolor;
+  @include align(center, center);
+  p {
+    @include setupfont($athiti, 20px, white);
+  }
+}
+
+#logolink {
+    vertical-align: middle;
+    background-image: url('../images/cmdrwhite.png');
+    width: $menuheight;
+    height: $menuheight;
+    background-size: cover;
+    margin-left: 30px;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+menuitem {
+    vertical-align: middle;
+    @include setupfont($quicksand, 20px, white);
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    line-height: 75px;
+    opacity: 0.5;
+}

@@ -13,7 +13,7 @@ app.controller('portfolioController', function($scope) {
     },
     {
       title: "WHO I AM",
-      link: "background.html"
+      link: "bio.html"
     },
     {
       title: "CONTACT ME",

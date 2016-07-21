@@ -1,0 +1,51 @@
+!DOCTYPE HTML>
+<html>
+  <head>
+
+    <!-- Load Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon32.png" sizes="32x32" />
+
+    <!-- Load Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Athiti|Quicksand" rel="stylesheet"/>
+
+    <!-- Load CSS -->
+    <link type="text/css" rel="stylesheet" href="css/bio.css"/>
+
+    <!-- Load AngularJS & script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/indexcontroller.js"></script>
+
+    <!-- Load jQuery Script file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/menujquery.js"></script>
+
+  <title>cmd + R to Refresh</title>
+  </head>
+
+  <body ng-app="indexApp" ng-controller="indexController">
+
+    <div id="topmenu">
+      <a href="http://cmdrtorefresh.comxa.com"><div id="logolink"></div></a>
+      <a ng-repeat="page in pages" href="{{ page.link }}"><menuitem>{{ page.title }}</menuitem></a>
+    </div>
+
+    <div class="container">
+      <div id="description">
+        <h1>My Story</h1>
+        <p>I have always enjoyed the thrill of finding solutions. In my previous career, I designed seawater desalination systems for projects in fresh-water scarce places around the world. When I wasn't involved in desalination projects, I helped companies reused the water content in their waste water. Every project had its own problems and rewards.</p>
+        <p>Later on, I was introduced to my first computing language, Python. When I built my first project from scratch, the game Battleship, I knew my affair with software development has started. I self-taught myself more languages and built more personal projects, fueled by a definite "I can learn this" and a combination of "It'd be fun to..." and "There's gotta be a better way to do this!". I understand software engineering provides bridges to build more, and I answered that calling. After a lot of considerations, I left my company to rise to a new challenge.</p>
+        <p>I realize that I like being closer to the user, "Front End" side. I guess the experience of listening to customers' needs makes me pay attention to how a user interract with something I built. Naturally, I got attracted to web and mobile development due to the amount of direct contact with users they include.</p>
+        <p>I am happy with what I have learned so far. No doubt that there's an ocean of fast-changing knowledge in front of me and I'm excited of my potential. I know I can create more, bigger, and more useful things with experience. I trully believe everybody can learn when they want.</p>
+        <p>"Face Everything And Rise".</p>
+        <h1>Resume</h1>
+        <a href="pdf/resumejul2016np.pdf" download="pdf/resumejul2016np.pdf"><p>Download my resume here.</p></a>
+      </div>
+
+      <div id="picture"></div>
+
+    </div>
+
+
+    <div id="footer"><p>Copyright © 2016 Stephanie Kirtiadi. All Rights Reserved.</p></div>
+  </body>
+</html>
