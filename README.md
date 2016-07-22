@@ -1,21 +1,38 @@
 # Portfolio Page
 
-## Page
+## Pages
 
-All content will reside in index.html
+There are 4 pages : Welcome / Home, Portfolio, Background and Contact Me.
 
 ## Sections
 
-Page will comprise of a few segments :
-- Main Logo of Cmd + R to Refresh, Links, Purpose of webpage : kinds of position Cmd + R are interested in.
-- Portfolio Projects
+Page will comprise of one or a few segments.
+
+##### Welcome/Home
+- Main Logo of Cmd + R to Refresh
+- Links
+- Purpose of webpage : kinds of position Cmd + R are interested in.
+- Projects snippets
 - Skills
-- Previous works and education
-- Resume + Who is(?)
-- Contact Me
+
+##### Portfolio Projects
+- Each project's description.
+- Link to blog post or Github.
+
+##### Background
+- Previous works and education.
+- Resume to download.
+
+##### Contact Me
+- Links to other sites.
+- Link to Resume in Background page.
 
 ## Tools
-
-- HTML, CSS, SASS For Content
+- HTML, CSS, SASS and AngularJS For Content
 - JQuery for Menu
-- (?) For Contact Me Forms
+
+## Future Additions:
+
+Future feature addition to the website to include:
+- Contact Me email form.
+- Mobile version of the site.

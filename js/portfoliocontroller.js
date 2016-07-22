@@ -29,7 +29,7 @@ app.controller('portfolioController', function($scope) {
       tagline: "For Tango Dancers on the Go!",
       type: "iOS App",
       tool: "Swift Language in Apple's XCode IDE",
-      purpose: "Foodies are lucky to have the mobile Yelp app. Avid tango dancers want to know what's going on in town, but what's currently available online is not viewing-friendly on the go, and events are not easy to filter and search. With Yumba, dancers can find a class, a practice session, a social event, or a festival. Filtering will be a breeze and dancers will be able to save and follow their favorite djs, musicians, teachers and series. Database and user authentication are done by utilizing Firebase SDK for iOS, Google Maps UI is done by implementing Google Maps SDK for iOS, and forward geocoding is done by HTTP requests to Google Maps API.",
+      purpose: "Foodies are lucky to have the mobile Yelp app. Avid tango dancers want to know what's going on in town, but current resource is not viewing-friendly on the go, and events are not easy to filter and search. With Yumba, dancers can find a class, a practice session, a social event, or a festival. Filtering is a breeze and dancers are able to save and follow their favorite djs, musicians, teachers and series. Database and user authentication utilize Firebase SDK for iOS, Google Maps UI lends to Google Maps SDK for iOS, and forward geocoding uses HTTP requests to Google Maps API. Everything else was written from scratch.",
       link: "https://cmdrtorefresh.blogspot.com/2016/07/yumba-ios-tango-app.html"
     },
     {
@@ -39,7 +39,7 @@ app.controller('portfolioController', function($scope) {
       tagline: "Play the game without the board!",
       type: "Command-Line Game",
       tool: "Ruby Language",
-      purpose: "Travelling usually include waiting for a long time. There are several ways to spend the time. A constructive one includes learning and improvement. The other includes having fun. At the time of writing the game, I played Pandemic, the popular board game a lot, but of course the board is too bulky for a carry-on. By writing the command-line version of the game, I learn to design so that the user can effectively communicate with the game. The result of the project is proven to be a wonderful accompaniment on train-rides.",
+      purpose: "Travelling usually includes waiting. There are several ways to spend the time. A constructive one includes fun and learning. At the time of writing the game, I played Pandemic, the popular board game a lot, but of course the board was too bulky for a carry-on. I could pay for the available app, or I could sharpen my programming. By writing the command-line version of the game, I learned to design so that the users can effectively communicate with the game. The result of the project is proven to be a wonderful accompaniment on train-rides.",
       link: "https://github.com/cmdrtorefresh/pandemic"
     },
     {
@@ -49,7 +49,7 @@ app.controller('portfolioController', function($scope) {
       tagline: "Where they all merge",
       type: "Personal Website",
       tool: "HTML/CSS, SASS, AngularJS, jQuery",
-      purpose: "The purpose of this project is two-fold. I want an exercise to refresh my front end stuffs and I need an actual webpage for my portfolio. Just like the other projects, it's made entirely from scratch. It deepens my understanding of the power and limitations of AngularJS. All artworks are also self-made to avoid any potential troubles.",
+      purpose: "The purpose of this project is two-fold. I want an exercise to refresh my front end stuffs and I need an actual webpage for my portfolio. Just like the other projects, it's made entirely from scratch. Yes, there are services like Weebly, WordPress, etc, but starting from blank deepens my understanding of the power and limitations of tools like AngularJS. Artworks were also self-made to avoid any potential troubles.",
       link: "http://cmdrtorefresh.comxa.com"
     }
   ];
