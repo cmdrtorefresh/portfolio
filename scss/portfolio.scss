@@ -34,8 +34,7 @@ $imageheight: 300px;
 $imagewidth: 300px;
 $containerpadding: 20px;
 $columnpadding: 20px;
-$rightcolumnwidth: 400px;
-$leftcolumnwidth: 400px;
+$columnwidth: 400px;
 $learnmorewidth: 300px;
 $menuheight: 75px;
 $footerheight: 75px;
@@ -71,10 +70,11 @@ body {
 }
 
 .container {
+  padding-bottom: 100px;
   margin-bottom: 60px;
   @include align(center, center);
   height: auto;
-  min-width: $rightcolumnwidth + 2 * $containerpadding;
+  min-width: $columnwidth + 2 * $containerpadding;
   position: relative;
   @include shadow_around_div(10px, $darkfont);
   border-radius: 30px;
@@ -82,12 +82,10 @@ body {
   word-wrap: break-word;
   .column {
     position: relative;
-    margin: 30px auto;
+    margin: 0px auto;
     @include align(center, left);
-    top: $columnpadding;
-    left: $columnpadding;
     padding: $columnpadding;
-    width: $leftcolumnwidth;
+    width: $columnwidth;
     display: inline-block;
     min-width: 300px;
     height: auto;
@@ -95,9 +93,8 @@ body {
     a linkbutton {
       @extend .link;
       position: absolute;
-      left: $columnpadding + 0.5 * ($rightcolumnwidth - $learnmorewidth);
-      margin-top: 30px;
-      margin-bottom: 30px;
+      left: $columnpadding + 0.5 * ($columnwidth - $learnmorewidth);
+      margin-top: 20px;
     }
   }
 }
