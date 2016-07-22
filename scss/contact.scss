@@ -46,48 +46,50 @@ $darkblue3: #002533;
 $lightgrey: #e6e6e6;
 $darkfont: #595959;
 $bodycolor: #1a1a1a;
+$containercolor: #d9e5d1;
 
 body {
   background-color: $bodycolor;
   margin: 0px;
 }
 
-.container {
+#background {
+  @include align(center, center);
+  background-image: url("../images/pattern3.png");
+  background-repeat: repeat;
+  padding-bottom: 60px;
+  padding-top: 120px;
   background-color: white;
   width: 100%;
   height: auto;
   position: relative;
-  display: block;
 }
 
-#description {
-  padding: 50px;
-  vertical-align: top;
-  width: 60%;
+#wrapper {
+  margin: 40px auto;
+  width: 80%;
+  min-width: 400px;
   height: auto;
+  position: relative;
+  padding: 20px 0px 20px 0px;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 30px;
 }
 
-#picture {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  vertical-align: top;
-  background-image: url("../images/biopic.jpeg");
-  background-size: cover;
-  width: $picturewidth;
-  height: $pictureheight;
-  max-width: 30%;
-}
-
-h1 {
-  @include setupfont($athiti, 50px, $darkfont);
-}
-
-p {
+.container {
+  @include shadow_around_div(10px, $darkfont);
+  margin: 30px auto;
+  padding: 20px 10px 20px 10px;
+  background-color: white;
   word-wrap: break-word;
-  color: $darkfont;
-  font-size: 18px;
-  font-family: $athiti;
+  @include align(center, center);
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #topmenu {
@@ -95,7 +97,7 @@ p {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: $menuheight;
+  height: 75px;
   background-color: $bodycolor;
 }
 
@@ -110,6 +112,7 @@ p {
     @include setupfont($athiti, 20px, white);
   }
 }
+
 
 #logolink {
     vertical-align: middle;
@@ -130,6 +133,19 @@ menuitem {
     display: inline-block;
     line-height: 75px;
     opacity: 0.5;
+}
+
+h1 {
+  @include setupfont($athiti, 50px, $darkfont);
+}
+
+h3 {
+  @include setupfont($athiti, 20px, $blue);
+  margin-right: 10px;
+}
+
+p {
+  @include setupfont($arimamadurai, 18px, $darkfont);
 }
 
 a {

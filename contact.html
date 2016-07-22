@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <!-- Load Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon32.png" sizes="32x32" />
+
+    <!-- Load Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Athiti|Quicksand" rel="stylesheet"/>
+
+    <!-- Load CSS -->
+    <link type="text/css" rel="stylesheet" href="css/contact.css"/>
+
+    <!-- Load AngularJS & script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/indexcontroller.js"></script>
+
+    <!-- Load jQuery Script file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/menujquery.js"></script>
+
+  <title>cmd + R to Refresh</title>
+  </head>
+
+  <body ng-app="indexApp" ng-controller="indexController">
+
+    <div id="topmenu">
+      <a href="http://cmdrtorefresh.comxa.com"><div id="logolink"></div></a>
+      <a ng-repeat="page in pages" href="{{ page.link }}"><menuitem>{{ page.title }}</menuitem></a>
+    </div>
+
+    <div id="background">
+      <div id="wrapper">
+        <h1>Contact Me</h1>
+        <a ng-repeat="icon in iconlist" target="_blank" href="{{ icon.link }}">
+          <div class="container">
+            <h3>{{ icon.title }}:</h3>
+            <p>{{ icon.address }}</p>
+          </div>
+        </a>
+        <h1>Resume</h1>
+        <a href="bio.html#resume"><menuitem><p>Click here to go to my resume!</p></menuitem></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="footer"><p>Copyright © 2016 Stephanie Kirtiadi. All Rights Reserved.</p></div>
+  </body>
+</html>

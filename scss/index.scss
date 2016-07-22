@@ -202,7 +202,7 @@ a {
 .bigcircle {
     @include align(center, center);
     margin: 40px;
-    padding: 30px;
+    padding: 25px;
     background-color: white;
     @include shadow_around_div(10px, #8c8c8c);
     width: 250px;

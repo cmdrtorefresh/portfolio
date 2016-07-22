@@ -24,16 +24,22 @@ app.controller('indexController', function($scope) {
   // Social Icon Tiles
   $scope.iconlist = [
         {
+          title: "email",
+          address: "cmdrtorefresh@gmail.com",
           image: "images/email.png",
           link: "mailto:cmdrtorefresh@gmail.com?Subject=Hello!",
           target: "_self"
         },
         {
+          title: "blog",
+          address: "https://cmdrtorefresh.blogspot.com",
           image: "images/blog.png",
           link: "https://cmdrtorefresh.blogspot.com",
           target: "_blank"
         },
         {
+          title: "github",
+          address: "https://github.com/cmdrtorefresh",
           image: "images/github.png",
           link: "https://github.com/cmdrtorefresh",
           target: "_blank"

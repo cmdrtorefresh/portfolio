@@ -14,8 +14,6 @@ body {
   vertical-align: top;
   width: 60%;
   height: auto; }
-  #description a {
-    text-decoration: none; }
 
 #picture {
   position: absolute;
@@ -24,8 +22,8 @@ body {
   vertical-align: top;
   background-image: url("../images/biopic.jpeg");
   background-size: cover;
-  width: 500px;
-  height: 625px;
+  width: 480px;
+  height: 600px;
   max-width: 30%; }
 
 h1 {
@@ -80,5 +78,8 @@ menuitem {
   display: inline-block;
   line-height: 75px;
   opacity: 0.5; }
+
+a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=bio.css.map */
