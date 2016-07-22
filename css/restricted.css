@@ -1,0 +1,21 @@
+body {
+  position: relative;
+  margin: 0px;
+  background-color: #63C6E3;
+  /* For browsers that do not support gradients */
+  background-color: -webkit-linear-gradient(left top, #63C6E3, #b3ecff);
+  /* For Safari */
+  background-color: -o-linear-gradient(bottom right, #63C6E3, #b3ecff);
+  /* For Opera */
+  background-color: -moz-linear-gradient(bottom right, #63C6E3, #b3ecff);
+  /* For Firefox */
+  background-color: linear-gradient(to bottom right, #63C6E3, #b3ecff);
+  /* Standard syntax */
+}
+
+p {
+  color: #595959;
+  position: absolute;
+  left: 40px;
+  font-family: Cabin Sketch, cursive;
+}
