@@ -6,52 +6,44 @@ body {
 
 #bodywrapper {
   margin: 0px;
-  position: absolute;
-  padding-top: 30px;
+  position: relative;
+  padding-top: 50px;
   padding-left: 15%;
   padding-right: 15%;
-  position: relative; }
+  align-content: center;
+  text-align: center; }
 
 .container {
-  align-self: center;
   margin-bottom: 60px;
+  align-content: center;
+  text-align: center;
   height: auto;
   min-width: 440px;
   position: relative;
   -moz-box-shadow: 0 0 10px #595959;
   -webkit-box-shadow: 0 0 10px #595959;
   box-shadow: 0 0 10px #595959;
-  padding: 5%;
   border-radius: 30px;
   background-color: white;
   word-wrap: break-word; }
-  .container .left {
-    align-content: left;
+  .container .column {
+    position: relative;
+    margin: 30px auto;
+    align-content: center;
     text-align: left;
     top: 20px;
     left: 20px;
     padding: 20px;
     width: 400px;
     display: inline-block;
-    min-width: 35%;
+    min-width: 300px;
     height: auto;
     vertical-align: top; }
-  .container .right {
-    align-content: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-    padding-bottom: 90px;
-    width: 400px;
-    min-width: 35%;
-    display: inline-block;
-    height: auto;
-    vertical-align: top; }
-    .container .right a linkbutton {
+    .container .column a linkbutton {
       position: absolute;
       left: 70px;
       margin-top: 30px;
-      margin-bottom: 25px; }
+      margin-bottom: 30px; }
 
 img {
   border-radius: 10px;
@@ -96,14 +88,14 @@ p {
 a {
   text-decoration: none; }
 
-.link, .container .right a linkbutton {
+.link, .container .column a linkbutton {
   border: 1px solid #63C6E3;
   width: 300px;
   height: 40px;
   border-radius: 10px;
   background-color: white;
   text-align: center; }
-  .link p, .container .right a linkbutton p {
+  .link p, .container .column a linkbutton p {
     margin: 12px 60px 12px 60px;
     font-family: "Quicksand", sans-serif;
     color: #63C6E3;

@@ -35,7 +35,7 @@
 
       <div class="container" ng-repeat="project in projects">
         <div id="{{ project.id }}">
-          <div class="left">
+          <div class="column">
             <img ng-src="{{ project.image }}"/>
             <h2>{{ project.title }}</h2>
             <h3>{{ project.tagline }}</h3>
@@ -43,7 +43,7 @@
             <p><span>What was it written in?</span> {{ project.tool }}</p>
           </div>
 
-          <div class="right">
+          <div class="column">
             <h4>So, what's the story?</h4>
             <p>{{ project.purpose }}</p>
             <a target="_blank" ng-href="{{ project.link }}"><linkbutton><p>GO TO PROJECT</p></linkbutton></a>
