@@ -1,3 +1,6 @@
+// Media Break size
+$break-small: 480px;
+
 // Mixins
 @mixin setupfont($family, $size, $color){
   font-family: $family;
@@ -33,15 +36,15 @@ $quicksand: 'Quicksand', sans-serif;
 // Dimensions
 $divheight: 750px;
 $divwidth: 100%;
+$divheightm: auto;
 
-$mainlogowidth: 35%;
 $mainlogoheight: auto;
 
 $biowidth: 500px;
 $biopaddingleft: 50px;
 $socialiconwidth: 50px;
 $socialiconheight: 50px;
-$intersocialicon: 15px;
+$intersocialicon: 30px;
 $projectheight: 575px;
 $projectwidth: 300px;
 $learnmorewidth: 250px;
@@ -49,6 +52,7 @@ $projectpadding: 20px;
 
 $menuheight: 75px;
 $footerheight: 75px;
+$footerheightmobile: 100px;
 
 
 // Colors
@@ -76,32 +80,68 @@ body {
 }
 
 #welcomepage {
-  height: $divheight;
+  margin: 0px auto;
   position: relative;
+  @media screen and (min-device-width: $break-small + 1px) {
+    height: $divheight;
+  }
+  @media screen and (max-device-width: $break-small) {
+    height: $divheight * 1.75;
+    @include align(center, center);
+  }
+
   #logo {
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-    max-width: 80%;
     background-image: url("../images/cmdr2lines.png");
-    opacity: 0.3;
-    width: 600px;
-    height: 235px;
     background-size: cover;
-    display: inline-table;
-    margin-right: 30px;
+    position: absolute;
+    @media screen and (min-device-width: $break-small + 1px) {
+      bottom: 20px;
+      right: 40px;
+      max-width: 80%;
+      opacity: 0.3;
+      width: 600px;
+      height: 235px;
+      display: inline-block;
+    }
+    @media screen and (max-device-width: $break-small){
+      opacity: 0;
+      left: 0px;
+      right: 0px;
+      top: 20px;
+      width: 90%;
+      height: 27%;
+      max-height: 200px;
+      display: block;
+      margin-right: 0px;
+      margin: 0px auto;
+    }
   }
   #bio {
     position: relative;
-    top: 20%;
-    left: 10%;
-    width: 40%;
-    max-width: 90%;
     display: block;
-    @include align(left, left);
-    h1 {
-      @include setupfont($arimamadurai, 50px, $blue);
-      font-weight: bold;
+    @media screen and (min-device-width: $break-small + 1px) {
+      top: 20%;
+      left: 10%;
+      width: 40%;
+      height: auto;
+      max-width: 90%;
+      @include align(left, left);
+      h1 {
+        @include setupfont($arimamadurai, 50px, $blue);
+        font-weight: bold;
+      }
+    }
+
+    @media screen and (max-device-width: $break-small) {
+      @include align(center, center);
+      top: 225px;
+      width: 90%;
+      margin: 5% auto;
+      height: auto;
+      min-height: 600px;
+      h1 {
+        @include setupfont($arimamadurai, 100px, $blue);
+      }
     }
   }
 }
@@ -110,10 +150,17 @@ body {
   background-size: cover;
   width: $socialiconwidth;
   height: $socialiconheight;
-  display: inline-table;
+  display: inline-block;
   margin-top: 20px;
   margin-right: $intersocialicon;
+  @media screen and (max-device-width: $break-small) {
+    width: $socialiconwidth * 2;
+    height: $socialiconheight * 2;
+  }
 }
+
+
+
 
 #portfolio {
   @include align(center, center);
@@ -121,39 +168,55 @@ body {
   border-style: solid;
   border-width: 10px;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   .projects {
+    @media screen and (min-device-width: $break-small + 1px) {
+      width: $projectwidth;
+      height: $projectheight;
+      margin-left: 35px;
+      margin-right: 35px;
+      h1 {
+        @include setupfont($arimamadurai, 35px, $blue);
+      }
+      h2 {
+        @include setupfont($arimamadurai, 20px, $darkfont);
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+    }
+    @media screen and (max-device-width: $break-small) {
+      width: 80%;
+      height: auto;
+      padding-bottom: 30px;
+      h1 {
+        @include setupfont($arimamadurai, 70px, $blue);
+      }
+      h2 {
+        @include setupfont($arimamadurai, 40px, $darkfont);
+      }
+      img {
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+      }
+    }
     @include align(center, center);
     position: relative;
     border-radius: 20px;
     @include shadow_around_div(3px, #ccc);
-    // border: 3px dashed $lightblue1;
     display: inline-table;
-    width: $projectwidth;
-    height: $projectheight;
     margin-top: 20px;
-    margin-left: 35px;
-    margin-right: 35px;
     background-color: white;
     padding-top: 20px;
     padding-left: $projectpadding;
     padding-right: 20px;
-    img {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px;
-    }
-    h1 {
-      @include setupfont($arimamadurai, 35px, $blue);
-    }
-    h2 {
-      @include setupfont($arimamadurai, 20px, $darkfont);
-    }
     .learnmorebutton{
       @extend .learnmore;
-      position: absolute;
-      bottom: 25px;
-      left: $projectpadding + 0.5 * ($projectwidth - $learnmorewidth);
+      position: relative;
+      margin: 30px auto;
     }
   }
 }
@@ -167,6 +230,9 @@ pagesubtitle {
   padding-top: 40px;
   @include setupfont($arimamadurai, 30px, $darkfont);
   display: block;
+  @media screen and (max-device-width: $break-small) {
+    font-size: 60px;
+  }
 }
 
 a {
@@ -184,6 +250,14 @@ a {
   p {
     margin: 12px 60px 12px 60px;
     @include setupfont($quicksand, 16px, $blue);
+  }
+  @media screen and (max-device-width: $break-small) {
+    height: 80px;
+    width: $learnmorewidth * 2;
+    border-radius: 20px;
+    p {
+      font-size: 32px;
+    }
   }
 }
 
@@ -215,6 +289,14 @@ a {
       font-size: 24px;
       line-height: 0.8;
     }
+    @media screen and (max-device-width: $break-small) {
+      width: 460px;
+      height: 460px;
+      h1 {
+        margin-top: 60px;
+        font-size: 40px;
+      }
+    }
 }
 
 p {
@@ -222,6 +304,9 @@ p {
   color: $darkfont;
   font-size: 18px;
   font-family: $athiti;
+  @media screen and (max-device-width: $break-small) {
+    font-size: 36px;
+  }
 }
 
 #topmenu {
@@ -231,13 +316,23 @@ p {
   width: 100%;
   height: $menuheight;
   background-color: $bodycolor;
+  @media screen and (max-device-width: $break-small) {
+    height: 100%;
+    width: 150px;
+    left: -150px;
+  }
 }
 
 #footer {
   padding: 5px;
   bottom: 0px;
   width: 100%;
-  height: $footerheight;
+  @media screen and (min-device-width: $break-small + 1) {
+      height: $footerheight;
+  }
+  @media screen and (max-device-width: $break-small) {
+      height: $footerheightmobile;
+  }
   background-color: $bodycolor;
   @include align(center, center);
   p {
@@ -264,4 +359,8 @@ menuitem {
     display: inline-block;
     line-height: 75px;
     opacity: 0.5;
+    @media screen and (max-device-width: $break-small) {
+      vertical-align: top;
+      display: block;
+    }
 }

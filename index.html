@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Athiti|Quicksand" rel="stylesheet"/>
 
     <!-- Load CSS -->
-    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="css/indexm.css"/>
 
     <!-- Load AngularJS & script -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
@@ -31,16 +31,17 @@
 
     <div class="container">
       <div id="welcomepage">
+        <div id="logo"></div>
         <div id="bio">
           <h1>Stephanie Kirtiadi</h1>
           <p>
-            A challenge-loving software engineer looking for a full-time Web or iOS Development position in the Bay Area.<br><br>
+            A challenge-loving software engineer looking for a full-time Web or iOS Developer position in the Bay Area.<br><br>
             Driven. Self-motivated. Likes learning. And Yoga.
           </p>
 
           <a ng-repeat ="icon in iconlist" href="{{ icon.link }}"><div class="socialicon" back-img="{{ icon.image }}"></div></a>
         </div>
-      <div id="logo"></div>
+
       </div>
     </div>
 

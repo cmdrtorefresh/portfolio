@@ -71,7 +71,7 @@ app.controller('indexController', function($scope) {
         title: "This Website",
         tagline: "Also proudly created from scratch!",
         subtitle: "Portfolio Website",
-        desc: "HTML, CSS, SASS, AngularJS",
+        desc: "HTML, CSS, SASS, AngularJS, jQuery",
         link: "#welcomepage",
         buttontext: "GO TO THE TOP"
       }
