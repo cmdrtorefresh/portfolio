@@ -317,11 +317,26 @@ p {
   height: $menuheight;
   background-color: $bodycolor;
   @media screen and (max-device-width: $break-small) {
-    height: 100%;
-    width: 150px;
-    left: -150px;
+    height: $menuheight * 2;
   }
 }
+
+menulogo {
+  background-image: url('../images/menuicon.png');
+  background-size: cover;
+  height: 0px;
+  width: 0px;
+  vertical-align: middle;
+  @include setupfont($quicksand, 20px, white);
+  margin-left: 0px;
+  display: inline-block;
+  @media screen and (max-device-width: $break-small) {
+    height: $menuheight * 2;
+    width: $menuheight * 2;
+    margin-left: 20px;
+  }
+}
+
 
 #footer {
   padding: 5px;
@@ -349,6 +364,21 @@ p {
     margin-left: 30px;
     margin-right: 50px;
     display: inline-block;
+    @media screen and (max-device-width: $break-small) {
+      height: 0px;
+      width: 0px;
+      margin: 0px;
+    }
+}
+
+#sidemenu {
+  background-color: $bodycolor;
+  z-index: 4;
+  position: fixed;
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 100%;
 }
 
 menuitem {
@@ -360,7 +390,17 @@ menuitem {
     line-height: 75px;
     opacity: 0.5;
     @media screen and (max-device-width: $break-small) {
-      vertical-align: top;
+      font-size: 40px;
       display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
+}
+
+#exitmenu {
+  background-image: url("../images/exit.png");
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  display: block;
 }
