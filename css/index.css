@@ -10,42 +10,83 @@ body {
   display: block; }
 
 #welcomepage {
-  height: 750px;
+  margin: 0px auto;
   position: relative; }
+  @media screen and (min-device-width: 481px) {
+    #welcomepage {
+      height: 750px; } }
+  @media screen and (max-device-width: 480px) {
+    #welcomepage {
+      height: 1312.5px;
+      align-content: center;
+      text-align: center; } }
   #welcomepage #logo {
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-    max-width: 80%;
     background-image: url("../images/cmdr2lines.png");
-    opacity: 0.3;
-    width: 600px;
-    height: 235px;
     background-size: cover;
-    display: inline-table;
-    margin-right: 30px; }
+    position: absolute; }
+    @media screen and (min-device-width: 481px) {
+      #welcomepage #logo {
+        bottom: 20px;
+        right: 40px;
+        max-width: 80%;
+        opacity: 0.3;
+        width: 600px;
+        height: 235px;
+        display: inline-block; } }
+    @media screen and (max-device-width: 480px) {
+      #welcomepage #logo {
+        opacity: 0;
+        left: 0px;
+        right: 0px;
+        top: 20px;
+        width: 90%;
+        height: 27%;
+        max-height: 200px;
+        display: block;
+        margin-right: 0px;
+        margin: 0px auto; } }
   #welcomepage #bio {
     position: relative;
-    top: 20%;
-    left: 10%;
-    width: 40%;
-    max-width: 90%;
-    display: block;
-    align-content: left;
-    text-align: left; }
-    #welcomepage #bio h1 {
-      font-family: "Arima Madurai", cursive;
-      color: #63C6E3;
-      font-size: 50px;
-      font-weight: bold; }
+    display: block; }
+    @media screen and (min-device-width: 481px) {
+      #welcomepage #bio {
+        top: 20%;
+        left: 10%;
+        width: 40%;
+        height: auto;
+        max-width: 90%;
+        align-content: left;
+        text-align: left; }
+        #welcomepage #bio h1 {
+          font-family: "Arima Madurai", cursive;
+          color: #63C6E3;
+          font-size: 50px;
+          font-weight: bold; } }
+    @media screen and (max-device-width: 480px) {
+      #welcomepage #bio {
+        align-content: center;
+        text-align: center;
+        top: 225px;
+        width: 90%;
+        margin: 5% auto;
+        height: auto;
+        min-height: 600px; }
+        #welcomepage #bio h1 {
+          font-family: "Arima Madurai", cursive;
+          color: #63C6E3;
+          font-size: 100px; } }
 
 .socialicon {
   background-size: cover;
   width: 50px;
   height: 50px;
-  display: inline-table;
+  display: inline-block;
   margin-top: 20px;
-  margin-right: 15px; }
+  margin-right: 30px; }
+  @media screen and (max-device-width: 480px) {
+    .socialicon {
+      width: 100px;
+      height: 100px; } }
 
 #portfolio {
   align-content: center;
@@ -54,7 +95,7 @@ body {
   border-style: solid;
   border-width: 10px;
   height: auto;
-  padding-bottom: 50px; }
+  padding-bottom: 30px; }
   #portfolio .projects {
     align-content: center;
     text-align: center;
@@ -64,31 +105,49 @@ body {
     -webkit-box-shadow: 0 0 3px #ccc;
     box-shadow: 0 0 3px #ccc;
     display: inline-table;
-    width: 300px;
-    height: 575px;
     margin-top: 20px;
-    margin-left: 35px;
-    margin-right: 35px;
     background-color: white;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px; }
-    #portfolio .projects img {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px; }
-    #portfolio .projects h1 {
-      font-family: "Arima Madurai", cursive;
-      color: #63C6E3;
-      font-size: 35px; }
-    #portfolio .projects h2 {
-      font-family: "Arima Madurai", cursive;
-      color: #595959;
-      font-size: 20px; }
+    @media screen and (min-device-width: 481px) {
+      #portfolio .projects {
+        width: 300px;
+        height: 575px;
+        margin-left: 35px;
+        margin-right: 35px; }
+        #portfolio .projects h1 {
+          font-family: "Arima Madurai", cursive;
+          color: #63C6E3;
+          font-size: 35px; }
+        #portfolio .projects h2 {
+          font-family: "Arima Madurai", cursive;
+          color: #595959;
+          font-size: 20px; }
+        #portfolio .projects img {
+          width: 200px;
+          height: 200px;
+          border-radius: 10px; } }
+    @media screen and (max-device-width: 480px) {
+      #portfolio .projects {
+        width: 80%;
+        height: auto;
+        padding-bottom: 30px; }
+        #portfolio .projects h1 {
+          font-family: "Arima Madurai", cursive;
+          color: #63C6E3;
+          font-size: 70px; }
+        #portfolio .projects h2 {
+          font-family: "Arima Madurai", cursive;
+          color: #595959;
+          font-size: 40px; }
+        #portfolio .projects img {
+          width: 350px;
+          height: 350px;
+          border-radius: 20px; } }
     #portfolio .projects .learnmorebutton {
-      position: absolute;
-      bottom: 25px;
-      left: 45px; }
+      position: relative;
+      margin: 30px auto; }
 
 pagetitle {
   font-family: "Arima Madurai", cursive;
@@ -102,6 +161,9 @@ pagesubtitle {
   color: #595959;
   font-size: 30px;
   display: block; }
+  @media screen and (max-device-width: 480px) {
+    pagesubtitle {
+      font-size: 60px; } }
 
 a {
   text-decoration: none; }
@@ -119,6 +181,13 @@ a {
     font-family: "Quicksand", sans-serif;
     color: #63C6E3;
     font-size: 16px; }
+  @media screen and (max-device-width: 480px) {
+    .learnmore, #portfolio .projects .learnmorebutton {
+      height: 80px;
+      width: 500px;
+      border-radius: 20px; }
+      .learnmore p, #portfolio .projects .learnmorebutton p {
+        font-size: 32px; } }
 
 #skills {
   position: relative;
@@ -158,12 +227,22 @@ a {
   .bigcircle p {
     font-size: 24px;
     line-height: 0.8; }
+  @media screen and (max-device-width: 480px) {
+    .bigcircle {
+      width: 460px;
+      height: 460px; }
+      .bigcircle h1 {
+        margin-top: 60px;
+        font-size: 40px; } }
 
 p, .bigcircle p {
   word-wrap: break-word;
   color: #595959;
   font-size: 18px;
   font-family: "Athiti", sans-serif; }
+  @media screen and (max-device-width: 480px) {
+    p, .bigcircle p {
+      font-size: 36px; } }
 
 #topmenu {
   z-index: 3;
@@ -172,15 +251,40 @@ p, .bigcircle p {
   width: 100%;
   height: 75px;
   background-color: #1a1a1a; }
+  @media screen and (max-device-width: 480px) {
+    #topmenu {
+      height: 150px; } }
+
+menulogo {
+  background-image: url("../images/menu.png");
+  background-size: cover;
+  height: 0px;
+  width: 0px;
+  vertical-align: middle;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-left: 0px;
+  display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    menulogo {
+      height: 150px;
+      width: 150px;
+      margin-left: 20px; } }
 
 #footer {
   padding: 5px;
   bottom: 0px;
   width: 100%;
-  height: 75px;
   background-color: #1a1a1a;
   align-content: center;
   text-align: center; }
+  @media screen and (min-device-width: 481px) {
+    #footer {
+      height: 75px; } }
+  @media screen and (max-device-width: 480px) {
+    #footer {
+      height: 100px; } }
   #footer p {
     font-family: "Athiti", sans-serif;
     color: white;
@@ -195,6 +299,18 @@ p, .bigcircle p {
   margin-left: 30px;
   margin-right: 50px;
   display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    #logolink {
+      height: 0px;
+      width: 0px;
+      margin: 0px; } }
+
+#dropdownmenu {
+  background-color: #1a1a1a;
+  z-index: 4;
+  width: 100%;
+  height: 530px;
+  display: none; }
 
 menuitem {
   vertical-align: middle;
@@ -206,5 +322,22 @@ menuitem {
   display: inline-block;
   line-height: 75px;
   opacity: 0.5; }
+  @media screen and (max-device-width: 480px) {
+    menuitem {
+      display: none; } }
 
-/*# sourceMappingURL=index.css.map */
+#dropdownitemcontainer {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 680px; }
+
+dropdownmenuitem {
+  vertical-align: middle;
+  display: block;
+  margin: 50px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 40px; }
+
+/*# sourceMappingURL=indexm.css.map */
