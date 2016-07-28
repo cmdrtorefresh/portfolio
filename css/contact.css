@@ -23,6 +23,9 @@ body {
   padding: 20px 0px 20px 0px;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 30px; }
+  @media screen and (max-device-width: 480px) {
+    #wrapper {
+      margin-top: 80px; } }
 
 .container {
   -moz-box-shadow: 0 0 10px #595959;
@@ -41,6 +44,46 @@ body {
   border-radius: 20px;
   margin-left: 20px;
   margin-right: 20px; }
+  @media screen and (max-device-width: 480px) {
+    .container {
+      width: 90%; } }
+
+h1 {
+  font-family: "Athiti", sans-serif;
+  color: #595959;
+  font-size: 50px; }
+  @media screen and (max-device-width: 480px) {
+    h1 {
+      font-size: 90px; } }
+
+h3 {
+  font-family: "Athiti", sans-serif;
+  color: #63C6E3;
+  font-size: 20px;
+  margin-right: 10px; }
+  @media screen and (max-device-width: 480px) {
+    h3 {
+      font-size: 40px; } }
+
+p {
+  font-family: "Arima Madurai", cursive;
+  color: #595959;
+  font-size: 18px; }
+  @media screen and (max-device-width: 480px) {
+    p {
+      font-size: 40px; } }
+
+a {
+  text-decoration: none; }
+
+resumelink {
+  opacity: 0.5;
+  font-family: "Arima Madurai", cursive;
+  color: #595959;
+  font-size: 18px; }
+  @media screen and (max-device-width: 480px) {
+    resumelink {
+      font-size: 40px; } }
 
 #topmenu {
   z-index: 3;
@@ -49,15 +92,40 @@ body {
   width: 100%;
   height: 75px;
   background-color: #1a1a1a; }
+  @media screen and (max-device-width: 480px) {
+    #topmenu {
+      height: 150px; } }
+
+menulogo {
+  background-image: url("../images/menu.png");
+  background-size: cover;
+  height: 0px;
+  width: 0px;
+  vertical-align: middle;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-left: 0px;
+  display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    menulogo {
+      height: 150px;
+      width: 150px;
+      margin-left: 20px; } }
 
 #footer {
   padding: 5px;
   bottom: 0px;
   width: 100%;
-  height: 75px;
   background-color: #1a1a1a;
   align-content: center;
   text-align: center; }
+  @media screen and (min-device-width: 481px) {
+    #footer {
+      height: 75px; } }
+  @media screen and (max-device-width: 480px) {
+    #footer {
+      height: 100px; } }
   #footer p {
     font-family: "Athiti", sans-serif;
     color: white;
@@ -72,6 +140,18 @@ body {
   margin-left: 30px;
   margin-right: 50px;
   display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    #logolink {
+      height: 0px;
+      width: 0px;
+      margin: 0px; } }
+
+#dropdownmenu {
+  background-color: #1a1a1a;
+  z-index: 4;
+  width: 100%;
+  height: 580px;
+  display: none; }
 
 menuitem {
   vertical-align: middle;
@@ -83,24 +163,22 @@ menuitem {
   display: inline-block;
   line-height: 75px;
   opacity: 0.5; }
+  @media screen and (max-device-width: 480px) {
+    menuitem {
+      display: none; } }
 
-h1 {
-  font-family: "Athiti", sans-serif;
-  color: #595959;
-  font-size: 50px; }
+#dropdownitemcontainer {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 730px; }
 
-h3 {
-  font-family: "Athiti", sans-serif;
-  color: #63C6E3;
-  font-size: 20px;
-  margin-right: 10px; }
-
-p {
-  font-family: "Arima Madurai", cursive;
-  color: #595959;
-  font-size: 18px; }
-
-a {
-  text-decoration: none; }
+dropdownmenuitem {
+  vertical-align: middle;
+  display: block;
+  margin: 50px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 40px; }
 
 /*# sourceMappingURL=contact.css.map */

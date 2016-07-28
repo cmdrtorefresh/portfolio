@@ -17,7 +17,7 @@
 
     <!-- Load jQuery Script file -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/menujquery.js"></script>
+    <script type="text/javascript" src="js/biojquery.js"></script>
 
   <title>cmd + R to Refresh</title>
   </head>
@@ -26,7 +26,14 @@
 
     <div id="topmenu">
       <a href="http://cmdrtorefresh.comxa.com"><div id="logolink"></div></a>
+      <menulogo></menulogo>
       <a ng-repeat="page in pages" href="{{ page.link }}"><menuitem>{{ page.title }}</menuitem></a>
+    </div>
+
+    <div id="dropdownmenu">
+      <div id="dropdownitemcontainer">
+        <a ng-repeat="page in pages" href="{{ page.link }}"><dropdownmenuitem>{{ page.title }}</dropdownmenuitem></a>
+      </div>
     </div>
 
     <div id="background">
@@ -39,7 +46,7 @@
           </div>
         </a>
         <h1>Resume</h1>
-        <a href="bio.html#resume"><menuitem><p>Click here to go to my resume!</p></menuitem></a>
+        <a href="bio.html#resume"><resumelink>Click here to go to my resume!</resumelink></a>
         </div>
       </div>
     </div>

@@ -3,39 +3,81 @@ body {
   margin: 0px; }
 
 .container {
+  align-content: left;
+  text-align: left;
   background-color: white;
   width: 100%;
   height: auto;
   position: relative;
   display: block; }
+  @media screen and (max-device-width: 480px) {
+    .container {
+      top: 150px; } }
 
 #description {
-  padding: 50px;
-  vertical-align: top;
-  width: 60%;
+  background-color: white;
   height: auto; }
+  @media screen and (max-device-width: 480px) {
+    #description {
+      align-content: center;
+      text-align: center;
+      margin: 5% auto;
+      padding: 5%;
+      display: block;
+      position: absolute;
+      top: 600px; } }
+  @media screen and (min-device-width: 481px) {
+    #description {
+      vertical-align: top;
+      padding: 50px;
+      width: 60%; } }
 
 #picture {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  vertical-align: top;
   background-image: url("../images/biopic.jpeg");
-  background-size: cover;
-  width: 480px;
-  height: 600px;
-  max-width: 30%; }
+  background-size: cover; }
+  @media screen and (min-device-width: 481px) {
+    #picture {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      vertical-align: top;
+      width: 480px;
+      height: 600px;
+      max-width: 30%; } }
+  @media screen and (max-device-width: 480px) {
+    #picture {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 600px;
+      display: block; } }
 
 h1 {
   font-family: "Athiti", sans-serif;
   color: #595959;
   font-size: 50px; }
+  @media screen and (max-device-width: 480px) {
+    h1 {
+      font-size: 90px; } }
 
 p {
   word-wrap: break-word;
   color: #595959;
   font-size: 18px;
   font-family: "Athiti", sans-serif; }
+  @media screen and (max-device-width: 480px) {
+    p {
+      font-size: 40px; } }
+
+resumelink {
+  font-family: "Athiti", sans-serif;
+  color: #595959;
+  font-size: 18px;
+  opacity: 0.5; }
+  @media screen and (max-device-width: 480px) {
+    resumelink {
+      font-size: 40px; } }
 
 #topmenu {
   z-index: 3;
@@ -44,15 +86,40 @@ p {
   width: 100%;
   height: 75px;
   background-color: #1a1a1a; }
+  @media screen and (max-device-width: 480px) {
+    #topmenu {
+      height: 150px; } }
+
+menulogo {
+  background-image: url("../images/menu.png");
+  background-size: cover;
+  height: 0px;
+  width: 0px;
+  vertical-align: middle;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-left: 0px;
+  display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    menulogo {
+      height: 150px;
+      width: 150px;
+      margin-left: 20px; } }
 
 #footer {
   padding: 5px;
   bottom: 0px;
   width: 100%;
-  height: 75px;
   background-color: #1a1a1a;
   align-content: center;
   text-align: center; }
+  @media screen and (min-device-width: 481px) {
+    #footer {
+      height: 75px; } }
+  @media screen and (max-device-width: 480px) {
+    #footer {
+      height: 100px; } }
   #footer p {
     font-family: "Athiti", sans-serif;
     color: white;
@@ -67,6 +134,18 @@ p {
   margin-left: 30px;
   margin-right: 50px;
   display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    #logolink {
+      height: 0px;
+      width: 0px;
+      margin: 0px; } }
+
+#dropdownmenu {
+  background-color: #1a1a1a;
+  z-index: 4;
+  width: 100%;
+  height: 580px;
+  display: none; }
 
 menuitem {
   vertical-align: middle;
@@ -78,6 +157,23 @@ menuitem {
   display: inline-block;
   line-height: 75px;
   opacity: 0.5; }
+  @media screen and (max-device-width: 480px) {
+    menuitem {
+      display: none; } }
+
+#dropdownitemcontainer {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 730px; }
+
+dropdownmenuitem {
+  vertical-align: middle;
+  display: block;
+  margin: 50px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 40px; }
 
 a {
   text-decoration: none; }

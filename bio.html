@@ -17,7 +17,7 @@
 
     <!-- Load jQuery Script file -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/menujquery.js"></script>
+    <script type="text/javascript" src="js/biojquery.js"></script>
 
   <title>cmd + R to Refresh</title>
   </head>
@@ -26,10 +26,18 @@
 
     <div id="topmenu">
       <a href="http://cmdrtorefresh.comxa.com"><div id="logolink"></div></a>
+      <menulogo></menulogo>
       <a ng-repeat="page in pages" href="{{ page.link }}"><menuitem>{{ page.title }}</menuitem></a>
     </div>
 
+    <div id="dropdownmenu">
+      <div id="dropdownitemcontainer">
+        <a ng-repeat="page in pages" href="{{ page.link }}"><dropdownmenuitem>{{ page.title }}</dropdownmenuitem></a>
+      </div>
+    </div>
+
     <div class="container">
+      <div id="picture"></div>
       <div id="description">
         <h1>My Story</h1>
         <p>My first computing language was Python. When I built my first project from scratch, the game Battleship, my affair with software development started. Since then, I self-taught myself a few more languages and built more personal projects, fueled by a definite "I can totally do this" and a combination of "It'd be fun to..." and "There's gotta be a better way to do this!". I realize software engineering grants great power to willing individuals, providing bridges to awesome things. After a lot of considerations, I left my previous company to rise to a new challenge.</p>
@@ -39,12 +47,9 @@
         <p>When I'm not in front of my computer, I keep myself active by practicing yoga and dancing tango.</p>
         <div id="resume">
           <h1>Resume</h1>
-          <a href="pdf/resumejul2016np.pdf" download="pdf/resumejul2016np.pdf"><menuitem><p>Download my resume here.</p></menuitem></a>
+          <a href="pdf/resumejul2016np.pdf" download="pdf/resumejul2016np.pdf"><resumelink>Download my resume here.</resumelink></a>
         </div>
       </div>
-
-      <div id="picture"></div>
-
     </div>
 
 
