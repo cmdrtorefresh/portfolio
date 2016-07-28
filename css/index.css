@@ -306,10 +306,12 @@ menulogo {
       margin: 0px; } }
 
 #dropdownmenu {
+  position: fixed;
+  top: 150px;
   background-color: #1a1a1a;
   z-index: 4;
   width: 100%;
-  height: 530px;
+  height: 470px;
   display: none; }
 
 menuitem {
@@ -328,9 +330,9 @@ menuitem {
 
 #dropdownitemcontainer {
   position: absolute;
-  top: 150px;
+  top: 0px;
   width: 100%;
-  height: 680px; }
+  height: 470px; }
 
 dropdownmenuitem {
   vertical-align: middle;
@@ -340,4 +342,4 @@ dropdownmenuitem {
   color: white;
   font-size: 40px; }
 
-/*# sourceMappingURL=indexm.css.map */
+/*# sourceMappingURL=index.css.map */
