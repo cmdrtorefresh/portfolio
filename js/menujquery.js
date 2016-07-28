@@ -11,6 +11,11 @@ $(document).ready(function(){
   });
 
   $('menulogo').click(function(){
+    if($('#dropdownmenu').css('display') == 'none'){
+      $(this).css("background-image", "url(../images/exit.png)");
+    } else {
+      $(this).css("background-image", "url(../images/menu.png)");
+    }
     $('#dropdownmenu').slideToggle('slow');
   });
 
