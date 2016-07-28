@@ -26,7 +26,14 @@
 
     <div id="topmenu">
       <a href="http://cmdrtorefresh.comxa.com"><div id="logolink"></div></a>
+      <menulogo></menulogo>
       <a ng-repeat="page in pages" href="{{ page.link }}"><menuitem>{{ page.title }}</menuitem></a>
+    </div>
+
+    <div id="dropdownmenu">
+      <div id="dropdownitemcontainer">
+        <a ng-repeat="page in pages" href="{{ page.link }}"><dropdownmenuitem>{{ page.title }}</dropdownmenuitem></a>
+      </div>
     </div>
 
     <div id="bodywrapper">
@@ -46,7 +53,7 @@
           <div class="column">
             <h4>So, what's the story?</h4>
             <p>{{ project.purpose }}</p>
-            <a target="_blank" ng-href="{{ project.link }}"><linkbutton><p>GO TO PROJECT</p></linkbutton></a>
+            <a target="_blank" ng-href="{{ project.link }}"><div class="linkbutton"><p>GO TO PROJECT</p></div></a>
           </div>
         </div>
       </div>

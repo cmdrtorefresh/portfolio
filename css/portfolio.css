@@ -12,6 +12,11 @@ body {
   padding-right: 15%;
   align-content: center;
   text-align: center; }
+  @media screen and (max-device-width: 480px) {
+    #bodywrapper {
+      padding-top: 200px;
+      padding-left: 5%;
+      padding-right: 5%; } }
 
 .container {
   padding-bottom: 100px;
@@ -19,7 +24,7 @@ body {
   align-content: center;
   text-align: center;
   height: auto;
-  min-width: 440px;
+  min-width: 470px;
   position: relative;
   -moz-box-shadow: 0 0 10px #595959;
   -webkit-box-shadow: 0 0 10px #595959;
@@ -33,20 +38,26 @@ body {
     align-content: center;
     text-align: left;
     padding: 20px;
-    width: 400px;
-    display: inline-block;
+    width: 430px;
+    display: inline-table;
     min-width: 300px;
     height: auto;
     vertical-align: top; }
-    .container .column a linkbutton {
-      position: absolute;
-      left: 70px;
-      margin-top: 20px; }
+    .container .column .linkbutton {
+      position: relative;
+      margin: 10px auto; }
+    @media screen and (max-device-width: 480px) {
+      .container .column {
+        align-content: center;
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 90%; } }
 
 img {
   border-radius: 10px;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   display: inline-flex; }
 
 h1 {
@@ -56,12 +67,19 @@ h1 {
   padding-bottom: 30px;
   display: block;
   text-align: right; }
+  @media screen and (max-device-width: 480px) {
+    h1 {
+      font-size: 144px;
+      text-align: center; } }
 
 h2 {
   font-family: "Arima Madurai", cursive;
   color: #63C6E3;
   font-size: 50px;
   line-height: 0.8; }
+  @media screen and (max-device-width: 480px) {
+    h2 {
+      font-size: 80px; } }
 
 h3 {
   font-family: "Arima Madurai", cursive;
@@ -69,6 +87,9 @@ h3 {
   font-size: 30px;
   line-height: 1;
   margin-bottom: 50px; }
+  @media screen and (max-device-width: 480px) {
+    h3 {
+      font-size: 50px; } }
 
 h4 {
   font-family: "Athiti", sans-serif;
@@ -76,28 +97,43 @@ h4 {
   font-size: 22px;
   font-weight: normal;
   line-height: 0.8; }
+  @media screen and (max-device-width: 480px) {
+    h4 {
+      font-size: 44px; } }
 
 p {
   font-family: "Athiti", sans-serif;
   color: #595959;
   font-size: 20px;
   margin-bottom: 10px; }
+  @media screen and (max-device-width: 480px) {
+    p {
+      font-size: 40px; } }
 
 a {
   text-decoration: none; }
 
-.link, .container .column a linkbutton {
+.link, .container .column .linkbutton {
+  margin: auto;
+  margin-top: 30px;
   border: 1px solid #63C6E3;
-  width: 300px;
+  width: 350px;
   height: 40px;
   border-radius: 10px;
   background-color: white;
   text-align: center; }
-  .link p, .container .column a linkbutton p {
+  .link p, .container .column .linkbutton p {
     margin: 12px 60px 12px 60px;
     font-family: "Quicksand", sans-serif;
     color: #63C6E3;
     font-size: 16px; }
+  @media screen and (max-device-width: 480px) {
+    .link, .container .column .linkbutton {
+      height: 80px;
+      width: 700px;
+      border-radius: 20px; }
+      .link p, .container .column .linkbutton p {
+        font-size: 32px; } }
 
 span {
   font-family: "Athiti", sans-serif;
@@ -105,6 +141,9 @@ span {
   font-size: 22px;
   font-weight: normal;
   line-height: 0.8; }
+  @media screen and (max-device-width: 480px) {
+    span {
+      font-size: 44px; } }
 
 #topmenu {
   z-index: 3;
@@ -113,15 +152,40 @@ span {
   width: 100%;
   height: 75px;
   background-color: #1a1a1a; }
+  @media screen and (max-device-width: 480px) {
+    #topmenu {
+      height: 150px; } }
+
+menulogo {
+  background-image: url("../images/menu.png");
+  background-size: cover;
+  height: 0px;
+  width: 0px;
+  vertical-align: middle;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-left: 0px;
+  display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    menulogo {
+      height: 150px;
+      width: 150px;
+      margin-left: 20px; } }
 
 #footer {
   padding: 5px;
   bottom: 0px;
   width: 100%;
-  height: 75px;
   background-color: #1a1a1a;
   align-content: center;
   text-align: center; }
+  @media screen and (min-device-width: 481px) {
+    #footer {
+      height: 75px; } }
+  @media screen and (max-device-width: 480px) {
+    #footer {
+      height: 100px; } }
   #footer p {
     font-family: "Athiti", sans-serif;
     color: white;
@@ -136,6 +200,18 @@ span {
   margin-left: 30px;
   margin-right: 50px;
   display: inline-block; }
+  @media screen and (max-device-width: 480px) {
+    #logolink {
+      height: 0px;
+      width: 0px;
+      margin: 0px; } }
+
+#dropdownmenu {
+  background-color: #1a1a1a;
+  z-index: 4;
+  width: 100%;
+  height: 580px;
+  display: none; }
 
 menuitem {
   vertical-align: middle;
@@ -147,5 +223,22 @@ menuitem {
   display: inline-block;
   line-height: 75px;
   opacity: 0.5; }
+  @media screen and (max-device-width: 480px) {
+    menuitem {
+      display: none; } }
+
+#dropdownitemcontainer {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  height: 730px; }
+
+dropdownmenuitem {
+  vertical-align: middle;
+  display: block;
+  margin: 50px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 40px; }
 
 /*# sourceMappingURL=portfolio.css.map */
