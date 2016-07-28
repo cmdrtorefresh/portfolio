@@ -11,8 +11,7 @@ $(document).ready(function(){
   });
 
   $('menulogo').click(function(){
-    $('#sidemenu').animate({
-      left: "+=100%"
-    },200);
+    $('#dropdownmenu').slideToggle('slow');
   });
+
 });

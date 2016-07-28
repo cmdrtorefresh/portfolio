@@ -30,9 +30,12 @@
       <a ng-repeat="page in pages" href="{{ page.link }}"><menuitem>{{ page.title }}</menuitem></a>
     </div>
 
-    <div id="sidemenu">
-
+    <div id="dropdownmenu">
+      <div id="dropdownitemcontainer">
+        <a ng-repeat="page in pages" href="{{ page.link }}"><dropdownmenuitem>{{ page.title }}</dropdownmenuitem></a>
+      </div>
     </div>
+
 
     <div class="container">
       <div id="welcomepage">
