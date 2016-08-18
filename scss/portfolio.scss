@@ -1,36 +1,4 @@
-// Media Break size
-$break-small: 480px;
-
-//Mixins
-@mixin setupfont($family, $size, $color){
-  font-family: $family;
-  color: $color;
-  font-size: $size;
-}
-
-@mixin align($content, $text: center){
-  align-content: $content;
-  text-align: $text;
-}
-
-@mixin gradient_background($color1,$color2) {
-  background: $color1; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, $color1, $color2); /* For Safari */
-  background: -o-linear-gradient(bottom right, $color1, $color2); /* For Opera */
-  background: -moz-linear-gradient(bottom right, $color1, $color2); /* For Firefox */
-  background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
-}
-
-@mixin shadow_around_div($blurradius, $color){
-  -moz-box-shadow: 0 0 $blurradius $color;
-  -webkit-box-shadow: 0 0 $blurradius $color;
-  box-shadow: 0 0 $blurradius $color;
-}
-
-//Fonts
-$athiti: 'Athiti', sans-serif;
-$arimamadurai: 'Arima Madurai', cursive;
-$quicksand: 'Quicksand', sans-serif;
+@import 'common';
 
 //Dimensions
 $imageheight: 350px;
@@ -39,33 +7,16 @@ $containerpadding: 20px;
 $columnpadding: 20px;
 $columnwidth: 430px;
 $learnmorewidth: 350px;
-$menuheight: 75px;
-$footerheight: 75px;
-$footerheightmobile: 100px;
-
-//Colors
-$lightblue1: #b3ecff;
-$lightblue2: #80dfff;
-$blue: #63C6E3;
-$darkblue1: #0086b3;
-$darkblue2: #004d66;
-$darkblue3: #002533;
-$lightgrey: #e6e6e6;
-$darkfont: #595959;
-$bodycolor: #1a1a1a;
-
 
 
 body {
-  background-color: $bodycolor;
-  margin: 0px;
   background-image: url(../images/pattern.png);
   background-repeat: repeat-y;
 }
 
 #bodywrapper {
   margin: 0px;
-  margin-top: 50px;
+  margin-top: 90px;
   position: relative;
   padding-left: 15%;
   padding-right: 15%;
@@ -164,10 +115,6 @@ p {
   }
 }
 
-a {
-  text-decoration: none;
-}
-
 .link {
   margin: auto;
   margin-top: 30px;
@@ -198,103 +145,4 @@ span {
   @media screen and (max-device-width: $break-small) {
     font-size: 44px;
   }
-}
-
-#topmenu {
-  z-index: 3;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: $menuheight;
-  background-color: $bodycolor;
-  @media screen and (max-device-width: $break-small) {
-    height: $menuheight * 2;
-  }
-}
-
-menulogo {
-  background-image: url('../images/menu.png');
-  background-size: cover;
-  height: 0px;
-  width: 0px;
-  vertical-align: middle;
-  @include setupfont($quicksand, 20px, white);
-  margin-left: 0px;
-  display: inline-block;
-  @media screen and (max-device-width: $break-small) {
-    height: $menuheight * 2;
-    width: $menuheight * 2;
-    margin-left: 20px;
-  }
-}
-
-
-#footer {
-  padding: 5px;
-  bottom: 0px;
-  width: 100%;
-  @media screen and (min-device-width: $break-small + 1) {
-      height: $footerheight;
-  }
-  @media screen and (max-device-width: $break-small) {
-      height: $footerheightmobile;
-  }
-  background-color: $bodycolor;
-  @include align(center, center);
-  p {
-    @include setupfont($athiti, 20px, white);
-  }
-}
-
-#logolink {
-    vertical-align: middle;
-    background-image: url('../images/cmdrwhite.png');
-    width: $menuheight;
-    height: $menuheight;
-    background-size: cover;
-    margin-left: 30px;
-    margin-right: 50px;
-    display: inline-block;
-    @media screen and (max-device-width: $break-small) {
-      height: 0px;
-      width: 0px;
-      margin: 0px;
-    }
-}
-
-#dropdownmenu {
-  position: fixed;
-  top: 2 * $menuheight;
-  background-color: $bodycolor;
-  z-index: 4;
-  width: 100%;
-  height: 470px;
-  display: none;
-}
-
-menuitem {
-  vertical-align: middle;
-  @include setupfont($quicksand, 20px, white);
-  margin-left: 20px;
-  margin-right: 20px;
-  display: inline-block;
-  line-height: $menuheight;
-  opacity: 0.5;
-  @media screen and (max-device-width: $break-small) {
-    display: none;
-  }
-}
-
-#dropdownitemcontainer {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 470px;
-}
-
-dropdownmenuitem {
-  vertical-align: middle;
-  display: block;
-  margin: 50px;
-  @include setupfont($quicksand, 40px, white);
 }
