@@ -49,6 +49,15 @@ app.controller('indexController', function($scope) {
   // Project Tiles
   $scope.projectlist = [
       {
+        image: "images/yogini.png",
+        title: "Yogini's Life",
+        tagline: "Journaling Being Present!",
+        subtitle: "Personal Blog / Website",
+        desc: "Ruby on Rails Framework, Ruby language, PostgreSQL for database, Heroku deployment",
+        link: "portfolio.html#yoginislife",
+        buttontext: "LEARN MORE"
+      },
+      {
         image: "images/yumba.png",
         title: "Yumba",
         tagline: "For tangueros on the go!",
@@ -89,6 +98,10 @@ app.controller('indexController', function($scope) {
     {
       subject: "Database",
       items: ["PostgreSQL(SQL)","Firebase"]
+    },
+    {
+      subject: "Framework",
+      items: ["Ruby on Rails"]
     },
     {
       subject: "SDK & IDE",

@@ -23,6 +23,16 @@ app.controller('portfolioController', function($scope) {
 
   $scope.projects = [
     {
+      id: "yoginislife",
+      image: "images/yogini.png",
+      title: "Yogini's Life",
+      tagline: "Journaling Being Present!",
+      type: "Personal Blog / Website",
+      tool: "Ruby Language and Ruby on Rails",
+      purpose: "If you're a yogini who codes, or a coder who yogs, what do you do when your 200 Hr Yoga Teacher Training requires you to journal your classes? Yes, Ruby on Rails with plenty of personal touch. Starting it as a requirement, I am excited to record even more yoga adventures later on. Written in Ruby language with several awesome gems, using PostgreSQL for database, deployed on Heroku, the mobile-friendly blog is a happy place where codes and yoga reside together in harmony and oneness. Namaste.",
+      link: "http://www.yoginis.life"
+    },
+    {
       id: "yumba",
       image: "images/yumba.png",
       title: "Yumba",
